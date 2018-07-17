@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Bangkok Transit</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="ARL">Airport Rail Link</string>
+    <string name="BTS_Sukhumvit">BTS - Sukhumvit Line</string>
+    <string name="BTS_Silom">BTS - Silom Line</string>
+    <string name="MRT_blue">MRT - Blue Line</string>
+    <string name="MRT_purple">MRT - Purple Line</string>
+
+    <string-array name="train_names_array">
+        <item>Airport Rail Link</item>
+        <item>BTS - Sukhumvit Line</item>
+        <item>BTS - Silom Line</item>
+        <item>MRT - Blue Line</item>
+        <item>MRT - Purple Line</item>
+    </string-array>
+
+    <string-array name="stations_ARL_array">
+        <item>A1 Suvarnabhumi (Airport)</item>
+        <item>A2 Lat Krabang</item>
+        <item>A3 Ban Thap Chang</item>
+        <item>A4 Hua Mak</item>
+        <item>A5 Ramkhamhaeng</item>
+        <item>A6 Makkasan (MRT Blue Line Transfer)</item>
+        <item>A7 Ratchaprarop</item>
+        <item>A8 Phaya Thai (BTS Sukhumvit Line Transfer)</item>
+    </string-array>
+
+    <string-array name="stations_BTS_Sukhumvit_array">
+        <item>N8 Mo Chit (MRT Blue Line Transfer)</item>
+        <item>N7 Saphan Khwai</item>
+        <item>N5 Ari</item>
+        <item>N4 Sanam Pao</item>
+        <item>N3 Victory Monument</item>
+        <item>N2 Phaya Thai (Airport Rail Link Transfer)</item>
+        <item>N1 Ratchathewi</item>
+        <item>CEN Siam (BTS Silom Line Transfer)</item>
+        <item>E1 Chit Lom</item>
+        <item>E2 Phloen Chit</item>
+        <item>E3 Nana</item>
+        <item>E4 Asok (MRT Blue Line Transfer)</item>
+        <item>E5 Phrom Phong</item>
+        <item>E6 Thong Lo</item>
+        <item>E7 Ekkamai</item>
+        <item>E8 Phra Khanong</item>
+        <item>E9 On Nut</item>
+        <item>E10 Bang Chak</item>
+        <item>E11 Punnawithi</item>
+        <item>E12 Udom Suk</item>
+        <item>E13 Bang Na</item>
+        <item>E14 Bearing</item>
+        <item>E15 Samrong</item>
+    </string-array>
+
+    <string-array name="stations_BTS_Silom_array">
+        <item>W1 National Stadium</item>
+        <item>CEN Siam (BTS Sukhumwit Line Transfer)</item>
+        <item>S1 Ratchadamri</item>
+        <item>S2 Sala Daeng (MRT Blue Line Transfer)</item>
+        <item>S3 Chong Nonsi</item>
+        <item>S5 Surasak</item>
+        <item>S6 Saphan Taksin</item>
+        <item>S7 Krung Thonburi</item>
+        <item>S8 Wongwian Yai</item>
+        <item>S9 Pho Nimit</item>
+        <item>S10 Talat Phlu</item>
+        <item>S11 Wutthakat</item>
+        <item>S12 Bang Wa</item>
+    </string-array>
+
+    <string-array name="stations_MRT_Blue_array">
+        <item>BL10 Tao Poon (MRT Purple Line Transfer)</item>
+        <item>BL11 Bang Sue</item>
+        <item>BL12 Kamphaeng Phet</item>
+        <item>BL13 Chatuchak Park (BTS Sukhumvit Line Transfer)</item>
+        <item>BL14 Phahon Yothin</item>
+        <item>BL15 Lat Phrao</item>
+        <item>BL16 Ratchadaphisek</item>
+        <item>BL17 Sutthisan</item>
+        <item>BL18 Huai Khwang</item>
+        <item>BL19 Thailand Cultural Centre</item>
+        <item>BL20 Phra Ram 9</item>
+        <item>BL21 Phetchaburi (Airport Rail Link Transfer)</item>
+        <item>BL22 Sukhumvit (BTS Sukhumvit Line Transfer)</item>
+        <item>BL23 Queen Sirikit National Convention Centre</item>
+        <item>BL24 Khlong Toei</item>
+        <item>BL25 Lumphini</item>
+        <item>BL26 Si Lom (BTS Silom Line Transfer)</item>
+        <item>BL27 Sam Yan</item>
+        <item>BL28 Hua Lamphong</item>
+    </string-array>
+
+    <string-array name="stations_MRT_Purple_array">
+        <item>PP1 Khlong Bang Phai</item>
+        <item>PP2 Talad Bang Yai</item>
+        <item>PP3 Sam Yaek Bang Yai</item>
+        <item>PP4 Bang Phlu</item>
+        <item>PP5 Bang Rak Yai</item>
+        <item>PP6 Bang Rak Noi Tha It</item>
+        <item>PP7 Sai Ma</item>
+        <item>PP8 Phra Nangklao Bridge</item>
+        <item>PP9 Yaek Nonthaburi 1</item>
+        <item>PP10 Bang Krasor</item>
+        <item>PP11 Nonthaburi Civic Center	</item>
+        <item>PP12 Ministry of Public Health</item>
+        <item>PP13 Yaek Tiwanon</item>
+        <item>PP14 Wong Sawang</item>
+        <item>PP15 Bang Son</item>
+        <item>PP16 Tao Poon (MRT Blue Line Transfer)</item>
+    </string-array>
+
+    <string name="title_activity_station_info">StationInfoActivity</string>
+    <string name="large_text">
+        OmegaLUL\n
+    </string>
+</resources>
