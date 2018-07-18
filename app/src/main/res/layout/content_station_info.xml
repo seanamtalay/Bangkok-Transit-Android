@@ -14,18 +14,19 @@
 
         <Button
             android:id="@+id/set_origin_button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:text="As Origin"
-            style="@style/Widget.AppCompat.Button.Colored"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/set_destination_button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -34,23 +35,54 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="As Destination"
-            style="@style/Widget.AppCompat.Button.Colored"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toEndOf="@+id/set_origin_button"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/station_info_text"
+            android:id="@+id/station_info_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/large_text"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="StationName"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/set_origin_button" />
+
+        <TextView
+            android:id="@+id/station_info_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/station_info_name" />
+
+        <TextView
+            android:id="@+id/station_info_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Platform"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/station_info_line" />
+
+        <TextView
+            android:id="@+id/station_info_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/station_info_platform" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>
