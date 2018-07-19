@@ -8,14 +8,14 @@
     <string-array name="A1">
         <item>Suvarnabhumi Station (Airport)</item>
         <item>City Line</item>
-        <item>
-            Platform 1: Towards Phaya Thai Station\n
-            Platform 2: Towards Phaya Thai Station\n
+        <item>Platform 1: To Phaya Thai Station
+            \nPlatform 2: To Phaya Thai Station
+            \n
         </item>
         <item>
-            Number of exits: 2\n
-            Exit 1: Suvarnabhumi Airport\n\
-            Exit 2: Novotel Bangkok Suvarnabhumi Airport\n
+            Number of exits: 2
+            \nExit 1: Suvarnabhumi Airport
+            \nExit 2: Novotel Bangkok Suvarnabhumi Airport\n
         </item>
     </string-array>
 
@@ -23,8 +23,8 @@
         <item>Lat Krabang Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station\n
         </item>
         <item>Number of exits: 2\n</item>
     </string-array>
@@ -33,8 +33,8 @@
         <item>Ban Thap Chang Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station\n
         </item>
         <item>
             Number of exits: 2\n
@@ -45,11 +45,11 @@
         <item>Hua Mak Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station
         </item>
         <item>
-            Number of exits: 2\n
+            Number of exits: 2
         </item>
     </string-array>
 
@@ -57,11 +57,11 @@
         <item>Ramkhamhaeng Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station
         </item>
         <item>
-            Number of exits: 2\n
+            Number of exits: 2
         </item>
     </string-array>
 
@@ -69,12 +69,12 @@
         <item>Makkasan Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station
         </item>
         <item>
-            Number of exits: 2\n
-            Exit 1: Transits to MRT Blue Line - Phetchaburi Station\n
+            Number of exits: 2
+            \nExit 1: Transits to MRT Blue Line - Phetchaburi Station
         </item>
     </string-array>
 
@@ -82,11 +82,11 @@
         <item>Ratchaprarop Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Phaya Thai Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Phaya Thai Station
         </item>
         <item>
-            Number of exits: 2\n
+            Number of exits: 2
         </item>
     </string-array>
 
@@ -94,16 +94,16 @@
         <item>Phaya Thai Station</item>
         <item>City Line</item>
         <item>
-            Platform 1: Towards Suvarnabhumi Station\n
-            Platform 2: Towards Suvarnabhumi Station\n
+            Platform 1: To Suvarnabhumi Station
+            \nPlatform 2: To Suvarnabhumi Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 1: Phayathai Plaza\n
-            Exit 2: Ratchathewee Post Office\n
-            Exit 3: CP Tower 3\n
-            Exit 4: Florida Hotel Bangkok, Wannasorn Tower\n
-            Exit 5: Transits to BTS Sukhumvit Line - Phaya Tai Station\n
+            Number of exits: 5
+            \nExit 1: Phayathai Plaza
+            \nExit 2: Ratchathewee Post Office
+            \nExit 3: CP Tower 3
+            \nExit 4: Florida Hotel Bangkok, Wannasorn Tower
+            \nExit 5: Transits to BTS Sukhumvit Line - Phaya Tai Station
         </item>
     </string-array>
 
@@ -115,16 +115,16 @@
         <item>Mo Chit Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Arrival platform\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: Arrival platform
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Chatuchak Weekend Market\n
-            Exit 2: Department of Land Transport\n
-            Exit 3: Chatuchak Park\n
-            Exit 4: Parking lot\n
-            Note: All exits are connected to MRT Blue Line transit\n
+            Number of exits: 4
+            \nExit 1: Chatuchak Weekend Market
+            \nExit 2: Department of Land Transport
+            \nExit 3: Chatuchak Park
+            \nExit 4: Parking lot
+            \nNote: All exits are connected to MRT Blue Line transit
         </item>
     </string-array>
 
@@ -132,14 +132,14 @@
         <item>Saphan Khwai Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Saphan Khwai Market\n
-            Exit 2: Big-C, Paolo Hospital\n
-            Exit 3: Wat PhaiTan\n
+            Number of exits: 4
+            \nExit 1: Saphan Khwai Market
+            \nExit 2: Big-C, Paolo Hospital
+            \nExit 3: Wat PhaiTan
         </item>
     </string-array>
 
@@ -147,13 +147,13 @@
         <item>Ari Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 2: SME Tower\n
-            Exit 4: La Villa Ari\n
+            Number of exits: 4
+            \nExit 2: SME Tower
+            \nExit 4: La Villa Ari
         </item>
     </string-array>
 
@@ -161,13 +161,13 @@
         <item>Sanam Pao Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Phyathai 2 Hospital\n
-            Exit 2: Royal Thai Army Radio and Television Channel 5\n
+            Number of exits: 4
+            \nExit 1: Phyathai 2 Hospital
+            \nExit 2: Royal Thai Army Radio and Television Channel 5
         </item>
     </string-array>
 
@@ -175,16 +175,16 @@
         <item>Victory Monument Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Victory Monument\n
-            Exit 2: Century Movie Plaza\n
-            Exit 3: Rajavithi Hospital\n
-            Exit 4: Girl Guides Association of Thailand\n
-            Note: Sky Walk platform is available all around the Station\n
+            Number of exits: 4
+            \nExit 1: Victory Monument
+            \nExit 2: Century Movie Plaza
+            \nExit 3: Rajavithi Hospital
+            \nExit 4: Girl Guides Association of Thailand
+            \nNote: Sky Walk platform is available all around the Station
         </item>
     </string-array>
 
@@ -192,16 +192,16 @@
         <item>Phaya Thai Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 1: Payatai Plaza
-            Exit 2: Department of Livestock Development\n
-            Exit 3: CP Tower 3\n
-            Exit 4: Florida Hotel Bangkok, Wannasorn Tower\n
-            Exit 5: Transits to Airport Rail Link - Phaya Tai Station\n
+            Number of exits: 5
+            \nExit 1: Payatai Plaza
+            Exit 2: Department of Livestock Development
+            \nExit 3: CP Tower 3
+            \nExit 4: Florida Hotel Bangkok, Wannasorn Tower
+            \nExit 5: Transits to Airport Rail Link - Phaya Tai Station
         </item>
     </string-array>
 
@@ -209,13 +209,13 @@
         <item>Ratchathewi Station</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Asia Hotel Bangkok\n
-            Exit 2: Hollywood Street\n
+            Number of exits: 4
+            \nExit 1: Asia Hotel Bangkok
+            \nExit 2: Hollywood Street
         </item>
     </string-array>
 
@@ -223,19 +223,19 @@
         <item>Siam Station</item>
         <item>Sukhumvit Line, Silom Line</item>
         <item>
-            Platform 1 (3th Floor): Towards Samrong Station - Sukhumvit Line\n
-            Platform 2 (4th Floor): Towards Mo Chit Station - Sukhumvit Line\n
-            Platform 3 (3th Floor): Towards Bang Wa Station - Silom Line\n
-            Platform 4 (4th Floor): Towards National Stadium Station - Silom Line\n
+            Platform 1 (3th Floor): To Samrong Station - Sukhumvit Line
+            \nPlatform 2 (4th Floor): To Mo Chit Station - Sukhumvit Line
+            \nPlatform 3 (3th Floor): To Bang Wa Station - Silom Line
+            \nPlatform 4 (4th Floor): To National Stadium Station - Silom Line
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 1: Siam Center\n
-            Exit 2: Siam Square\n
-            Exit 3: Siam Paragon, Parc Paragon\n
-            Exit 4: Siam Square One, Siam Square\n
-            Exit 5: Siam Paragon, Sea Life Bangkok Ocean World\n
-            Exit 6: Siam Square, Sky Walk to Central World and Chit Lom Station\n
+            Number of exits: 6
+            \nExit 1: Siam Center
+            \nExit 2: Siam Square
+            \nExit 3: Siam Paragon, Parc Paragon
+            \nExit 4: Siam Square One, Siam Square
+            \nExit 5: Siam Paragon, Sea Life Bangkok Ocean World
+            \nExit 6: Siam Square, Sky Walk to Central World and Chit Lom Station
         </item>
     </string-array>
 
@@ -243,18 +243,18 @@
         <item>Chit Lom</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 7\n
-            Exit 1: TOT Building\n
-            Exit 2: Amarin Plaza\n
-            Exit 3: Metropolitan Electricity Authority\n
-            Exit 4: Ploen Chit Tower, Mater Dei School\n
-            Exit 5: Central Chidlom\n
-            Exit 6: Mercury Tower\n
-            Exit 7: Sky Walk to Central World and Siam Station\n
+            Number of exits: 7
+            \nExit 1: TOT Building
+            \nExit 2: Amarin Plaza
+            \nExit 3: Metropolitan Electricity Authority
+            \nExit 4: Ploen Chit Tower, Mater Dei School
+            \nExit 5: Central Chidlom
+            \nExit 6: Mercury Tower
+            \nExit 7: Sky Walk to Central World and Siam Station
         </item>
     </string-array>
 
@@ -262,13 +262,13 @@
         <item>Phloen Chit</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 4: Ploenchit Center\n
-            Exit 5: Central Embassy, Netherlands Embassy \n
+            Number of exits: 5
+            \nExit 4: Ploenchit Center
+            \nExit 5: Central Embassy, Netherlands Embassy
         </item>
     </string-array>
 
@@ -276,13 +276,13 @@
         <item>Nana</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 2: Two Pacific Place\n
-            Exit 3: Ambassador Hotel\n
+            Number of exits: 4
+            \nExit 2: Two Pacific Place
+            \nExit 3: Ambassador Hotel
         </item>
     </string-array>
 
@@ -290,18 +290,18 @@
         <item>Asok</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 7\n
-            Exit 1: Terminal 21\n
-            Exit 2: Sheraton Grande Sukhumvit\n
-            Exit 3: Terminal 21, Transits to MRT Blue Line - Sukhumvit Station\n
-            Exit 4: Benjakitti Park\n
-            Exit 5: Robinson, The Westin Grande Sukhumvit, Sheraton Grande Sukhumvit\n
-            Exit 6: Interchange21\n
-            Exit 7: Terminal 21\n
+            Number of exits: 7
+            \nExit 1: Terminal 21
+            \nExit 2: Sheraton Grande Sukhumvit
+            \nExit 3: Terminal 21, Transits to MRT Blue Line - Sukhumvit Station
+            \nExit 4: Benjakitti Park
+            \nExit 5: Robinson, The Westin Grande Sukhumvit, Sheraton Grande Sukhumvit
+            \nExit 6: Interchange21
+            \nExit 7: Terminal 21
         </item>
     </string-array>
 
@@ -309,14 +309,14 @@
         <item>Phrom Phong</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 1: EmQuartier\n
-            Exit 2: Emporium\n
-            Exit 6: Emporium, Benchasiri Park\n
+            Number of exits: 6
+            \nExit 1: EmQuartier
+            \nExit 2: Emporium
+            \nExit 6: Emporium, Benchasiri Park
         </item>
     </string-array>
 
@@ -324,12 +324,12 @@
         <item>Thong Lo</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Bangkok Prep School\n
+            Number of exits: 4
+            \nExit 1: Bangkok Prep School
         </item>
     </string-array>
 
@@ -337,14 +337,14 @@
         <item>Ekkamai</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Major Cineplex Sukhumvit\n
-            Exit 3: Sukumvit Hospital\n
-            Exit 4: Gateway Ekamai\n
+            Number of exits: 4
+            \nExit 1: Major Cineplex Sukhumvit
+            \nExit 3: Sukumvit Hospital
+            \nExit 4: Gateway Ekamai
         </item>
     </string-array>
 
@@ -352,12 +352,12 @@
         <item>Phra Khanong</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Jasmine Resort Hotel\n
+            Number of exits: 4
+            \nExit 1: Jasmine Resort Hotel
         </item>
     </string-array>
 
@@ -365,13 +365,13 @@
         <item>On Nut</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 2: Tesco Lotus\n
-            Exit 3: Century Movie Plaza\n
+            Number of exits: 4
+            \nExit 2: Tesco Lotus
+            \nExit 3: Century Movie Plaza
         </item>
     </string-array>
 
@@ -379,13 +379,13 @@
         <item>Bang Chak</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 3: Bangkok Technology School\n
-            Exit 5: Samahan Suksa School\n
+            Number of exits: 5
+            \nExit 3: Bangkok Technology School
+            \nExit 5: Samahan Suksa School
         </item>
     </string-array>
 
@@ -393,12 +393,12 @@
         <item>Punnawithi</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 6: Anglo Singapore International School, WHIZDOM 101\n
+            Number of exits: 6
+            \nExit 6: Anglo Singapore International School, WHIZDOM 101
         </item>
     </string-array>
 
@@ -406,14 +406,14 @@
         <item>Udom Suk</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 1: Thai Meteorological Department\n
-            Exit 3: Thai Meteorological Department\n
-            Exit 5: Thai Meteorological Department\n
+            Number of exits: 6
+            \nExit 1: Thai Meteorological Department
+            \nExit 3: Thai Meteorological Department
+            \nExit 5: Thai Meteorological Department
         </item>
     </string-array>
 
@@ -421,15 +421,15 @@
         <item>Bang Na</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 1: City Home Sukhumvit 2, Udom Suk Market\n
-            Exit 4: Ideo BluCove Sukhumvit Condo\n
-            Exit 5: City Home Sukhumvit 2, Udom Suk Market\n
-            Exit 6: BITEC Bang Na\n
+            Number of exits: 5
+            \nExit 1: City Home Sukhumvit 2, Udom Suk Market
+            \nExit 4: Ideo BluCove Sukhumvit Condo
+            \nExit 5: City Home Sukhumvit 2, Udom Suk Market
+            \nExit 6: BITEC Bang Na
         </item>
     </string-array>
 
@@ -437,12 +437,12 @@
         <item>Bearing</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Towards Samrong Station\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: To Samrong Station
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 1: Centerpoint Studio\n
+            Number of exits: 5
+            \nExit 1: Centerpoint Studio
         </item>
     </string-array>
 
@@ -450,13 +450,13 @@
         <item>Samrong</item>
         <item>Sukhumvit Line</item>
         <item>
-            Platform 1: Arrival platform\n
-            Platform 2: Towards Mo Chit Station\n
+            Platform 1: Arrival platform
+            \nPlatform 2: To Mo Chit Station
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 1: Imperial World Samrong, Samrong Market\n
-            Exit 3: Sam Rong Nuea Police Station\n
+            Number of exits: 6
+            \nExit 1: Imperial World Samrong, Samrong Market
+            \nExit 3: Sam Rong Nuea Police Station
         </item>
     </string-array>
 
@@ -469,16 +469,16 @@
         <item>National Stadium</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Arrival Platform\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: Arrival Platform
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Pathumwan Institute of Technology, Tesco Lotus, Jim Thompson House\n
-            Exit 2: National Stadium\n
-            Exit 3: Bangkok Art and Culture Centre\n
-            Exit 4: MBK Center\n
-            Note: Exit 3 and 4 are linked to the Sky Walk to Siam Discovery and Siam Square
+            Number of exits: 4
+            \nExit 1: Pathumwan Institute of Technology, Tesco Lotus, Jim Thompson House
+            \nExit 2: National Stadium
+            \nExit 3: Bangkok Art and Culture Centre
+            \nExit 4: MBK Center
+            \nNote: Exit 3 and 4 are linked to the Sky Walk to Siam Discovery and Siam Square
         </item>
     </string-array>
 
@@ -488,14 +488,14 @@
         <item>Ratchadamri</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 2: Nantawan Building\n
-            Exit 3: Police General Hospital\n
-            Exit 4: Anantara Siam Bangkok Hotel\n
+            Number of exits: 4
+            \nExit 2: Nantawan Building
+            \nExit 3: Police General Hospital
+            \nExit 4: Anantara Siam Bangkok Hotel
         </item>
     </string-array>
 
@@ -503,17 +503,17 @@
         <item>Sala Daeng</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 6\n
-            Exit 1: Thaniya Plaza, Bangkok Christian Hospital\n
-            Exit 2: CP Building\n
-            Exit 3: Yada Building\n
-            Exit 4: Silom Complex\n
-            Exit 5: Robinson Department Store\n
-            Exit 6: Walk Way transfer to MRT Blue Line - Silom Station
+            Number of exits: 6
+            \nExit 1: Thaniya Plaza, Bangkok Christian Hospital
+            \nExit 2: CP Building
+            \nExit 3: Yada Building
+            \nExit 4: Silom Complex
+            \nExit 5: Robinson Department Store
+            \nExit 6: Walk Way transfer to MRT Blue Line - Silom Station
         </item>
     </string-array>
 
@@ -521,15 +521,15 @@
         <item>Chong Nonsi</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Sathorn Square, The Infinity, W Bangkok\n
-            Exit 2: I Residence Hotel, FuramaXclusive Sathorn\n
-            Exit 3: MahaNakhon, MahaNakhon CUBE\n
-            Exit 4: The Heritage Silom, Trinity Silom Hotel\n
+            Number of exits: 4
+            \nExit 1: Sathorn Square, The Infinity, W Bangkok
+            \nExit 2: I Residence Hotel, FuramaXclusive Sathorn
+            \nExit 3: MahaNakhon, MahaNakhon CUBE
+            \nExit 4: The Heritage Silom, Trinity Silom Hotel
         </item>
     </string-array>
 
@@ -537,14 +537,14 @@
         <item>Surasak</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Chartered Square, Nanmee Books\n
-            Exit 2: Thai CC Tower, King Royal Garden Inn\n
-            Exit 4: King Mongkut's University of Technology Thonburi, Bangkok Code\n
+            Number of exits: 4
+            \nExit 1: Chartered Square, Nanmee Books
+            \nExit 2: Thai CC Tower, King Royal Garden Inn
+            \nExit 4: King Mongkut's University of Technology Thonburi, Bangkok Code
         </item>
     </string-array>
 
@@ -552,13 +552,13 @@
         <item>Saphan Taksin</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Harbour\n
-            Exit 2: Sathorn Pier\n
+            Number of exits: 4
+            \nExit 1: Harbour
+            \nExit 2: Sathorn Pier
         </item>
     </string-array>
 
@@ -566,14 +566,14 @@
         <item>Krung Thonburi</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Sinn Sathorn Tower\n
-            Exit 2: Ideo Sathorn-Taksin\n
-            Exit 3: Hive Sathorn\n
+            Number of exits: 4
+            \nExit 1: Sinn Sathorn Tower
+            \nExit 2: Ideo Sathorn-Taksin
+            \nExit 3: Hive Sathorn
         </item>
     </string-array>
 
@@ -581,13 +581,13 @@
         <item>Wongwian Yai</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Sky Walk\n
-            Exit 2: Teal Sathor, Sky Walk\n
+            Number of exits: 4
+            \nExit 1: Sky Walk
+            \nExit 2: Teal Sathor, Sky Walk
         </item>
     </string-array>
 
@@ -595,11 +595,11 @@
         <item>Pho Nimit</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
+            Number of exits: 4
         </item>
     </string-array>
 
@@ -607,11 +607,11 @@
         <item>Talat Phlu</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
+            Number of exits: 4
         </item>
     </string-array>
 
@@ -619,11 +619,11 @@
         <item>Wutthakat</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 5\n
+            Number of exits: 5
         </item>
     </string-array>
 
@@ -631,11 +631,11 @@
         <item>Bang Wa</item>
         <item>Silom Line</item>
         <item>
-            Platform 3: Towards Bang Wa Station\n
-            Platform 4: Towards National Stadium Station\n
+            Platform 3: To Bang Wa Station
+            \nPlatform 4: To National Stadium Station
         </item>
         <item>
-            Number of exits: 4\n
+            Number of exits: 4
         </item>
     </string-array>
 
@@ -647,17 +647,17 @@
         <item>Tao Poon</item>
         <item>Blue Line, Purple Line</item>
         <item>
-            Platform 1 (3th Floor): Towards Hua Lamphong Station (Blue Line)\n
-            Platform 2 (3th Floor): Towards Hua Lamphong Station (Blue Line)\n
-            Platform 3 (4th Floor): Towards Khlong Bang Phai Station (Purple Line)\n
-            Platform 4 (4th Floor): Towards Khlong Bang Phai Station (Purple Line)\n
+            Platform 1 (3th Floor): To Hua Lamphong Station (Blue Line)
+            \nPlatform 2 (3th Floor): To Hua Lamphong Station (Blue Line)
+            \nPlatform 3 (4th Floor): To Khlong Bang Phai Station (Purple Line)
+            \nPlatform 4 (4th Floor): To Khlong Bang Phai Station (Purple Line)
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Num Chai\n
-            Exit 2: Soi Krung Thep-Nonthaburi 1\n
-            Exit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market\n
-            Exit 4: Thanon Pracha Rat Sai 2\n
+            Number of exits: 4
+            \nExit 1: Soi Num Chai
+            \nExit 2: Soi Krung Thep-Nonthaburi 1
+            \nExit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market
+            \nExit 4: Thanon Pracha Rat Sai 2
         </item>
     </string-array>
 
@@ -665,13 +665,13 @@
         <item>Bang Sue</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 2\n
-            Exit 1: Thoet Damri Road, Bang Sue Railway Station(Northbound)\n
-            Exit 2: Rot Fai Road,Bang Sue Railway Station(Southbound)\n
+            Number of exits: 2
+            \nExit 1: Thoet Damri Road, Bang Sue Railway Station(Northbound)
+            \nExit 2: Rot Fai Road,Bang Sue Railway Station(Southbound)
         </item>
     </string-array>
 
@@ -679,14 +679,14 @@
         <item>Kamphaeng Phet</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Chatuchak Weekend Market\n
-            Exit 2: Chatuchak Weekend Market, Kamphaeng Phet 2 Road, Chatuchak Weekend Market\n
-            Exit 3: Farmers Market Organization, Kamphaeng Phet Road\n
+            Number of exits: 3
+            \nExit 1: Chatuchak Weekend Market
+            \nExit 2: Chatuchak Weekend Market, Kamphaeng Phet 2 Road, Chatuchak Weekend Market
+            \nExit 3: Farmers Market Organization, Kamphaeng Phet Road
         </item>
     </string-array>
 
@@ -694,15 +694,15 @@
         <item>Chatuchak Park</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Chatuchak Weekend Market\n
-            Exit 2: Chatuchak Park\n
-            Exit 3: Transit to BTS Sukhumvit Line - Mo Chit Station\n
-            Exit 4: Civil Aviation Training Centre, Department of Land Transport\n
+            Number of exits: 4
+            \nExit 1: Chatuchak Weekend Market
+            \nExit 2: Chatuchak Park
+            \nExit 3: Transit to BTS Sukhumvit Line - Mo Chit Station
+            \nExit 4: Civil Aviation Training Centre, Department of Land Transport
         </item>
     </string-array>
 
@@ -710,16 +710,16 @@
         <item>Phahon Yothin</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 5\n
-            Exit 1: Soi Lat Phrao 4\n
-            Exit 2: Saint John’s University\n
-            Exit 3: Hor Wang School\n
-            Exit 4: Lat Phrao Intersection\n
-            Exit 5: Soi Lat Phrao 1\n
+            Number of exits: 5
+            \nExit 1: Soi Lat Phrao 4
+            \nExit 2: Saint John’s University
+            \nExit 3: Hor Wang School
+            \nExit 4: Lat Phrao Intersection
+            \nExit 5: Soi Lat Phrao 1
         </item>
     </string-array>
 
@@ -727,16 +727,16 @@
         <item>Lat Phrao</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Lat Phrao 26, Ratchada-Lat Phrao Intersection\n
-            Exit 2: Soi Lat Phrao 24\n
-            Exit 3: Hor Wang School\n
-            Exit 4: Soi Lat Phrao 17\n
-            Exit 5: MRTA Park and Ride Building\n
+            Number of exits: 4
+            \nExit 1: Soi Lat Phrao 26, Ratchada-Lat Phrao Intersection
+            \nExit 2: Soi Lat Phrao 24
+            \nExit 3: Hor Wang School
+            \nExit 4: Soi Lat Phrao 17
+            \nExit 5: MRTA Park and Ride Building
         </item>
     </string-array>
 
@@ -744,15 +744,15 @@
         <item>Ratchadaphisek</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Panjasup School\n
-            Exit 2: Soi Chokchai 29\n
-            Exit 3: Soi Ratchadaphisek 26\n
-            Exit 4: Soi Ratchadaphisek 24\n
+            Number of exits: 4
+            \nExit 1: Panjasup School
+            \nExit 2: Soi Chokchai 29
+            \nExit 3: Soi Ratchadaphisek 26
+            \nExit 4: Soi Ratchadaphisek 24
         </item>
     </string-array>
 
@@ -760,15 +760,15 @@
         <item>Sutthisan</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Sutthisan Police Station\n
-            Exit 2: Soi Ratchadaphisek 20\n
-            Exit 3: Soi Ratchadaphisek 18\n
-            Exit 4: Soi Ratchadaphisek 17\n
+            Number of exits: 4
+            \nExit 1: Sutthisan Police Station
+            \nExit 2: Soi Ratchadaphisek 20
+            \nExit 3: Soi Ratchadaphisek 18
+            \nExit 4: Soi Ratchadaphisek 17
         </item>
     </string-array>
 
@@ -776,15 +776,15 @@
         <item>Huai Khwang</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Pracharat Bamphen Road\n
-            Exit 2: Soi Ratchadaphisek 12\n
-            Exit 3: Prachasongkroa Road\n
-            Exit 4: Kunnatee Ruttaram Wittayakom School\n
+            Number of exits: 4
+            \nExit 1: Pracharat Bamphen Road
+            \nExit 2: Soi Ratchadaphisek 12
+            \nExit 3: Prachasongkroa Road
+            \nExit 4: Kunnatee Ruttaram Wittayakom School
         </item>
     </string-array>
 
@@ -792,15 +792,15 @@
         <item>Thailand Cultural Centre</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Thailand Cultural Centre\n
-            Exit 2: Soi Ratchadaphisek 8\n
-            Exit 3: Soi Ratchadaphisek 5, The Embassy of the Republic of China, Esplanade Ratchadapisek\n
-            Exit 4: Thiam Ruam Mit Intersection, Big-C\n
+            Number of exits: 4
+            \nExit 1: Thailand Cultural Centre
+            \nExit 2: Soi Ratchadaphisek 8
+            \nExit 3: Soi Ratchadaphisek 5, The Embassy of the Republic of China, Esplanade Ratchadapisek
+            \nExit 4: Thiam Ruam Mit Intersection, Big-C
         </item>
     </string-array>
 
@@ -808,14 +808,14 @@
         <item>Phra Ram 9</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Soi Ratchadaphisek 3, Fortune Town Building\n
-            Exit 2: Soi Rama 9 Square, Central Plaza RAMA 9\n
-            Exit 3: Rama 9 Intersection\n
+            Number of exits: 3
+            \nExit 1: Soi Ratchadaphisek 3, Fortune Town Building
+            \nExit 2: Soi Rama 9 Square, Central Plaza RAMA 9
+            \nExit 3: Rama 9 Intersection
         </item>
     </string-array>
 
@@ -823,14 +823,14 @@
         <item>Phetchaburi</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Sky Walk transit to Airport Rail Link - Makkassan Station\n
-            Exit 2: Asoke Pier, Klong Saen Seap\n
-            Exit 3: Asoke - Din Deang Road, Kamphaeng Phet 7 Road\n
+            Number of exits: 3
+            \nExit 1: Sky Walk transit to Airport Rail Link - Makkassan Station
+            \nExit 2: Asoke Pier, Klong Saen Seap
+            \nExit 3: Asoke - Din Deang Road, Kamphaeng Phet 7 Road
         </item>
     </string-array>
 
@@ -838,14 +838,14 @@
         <item>Sukhumvit</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Asoke Road, The Siam Society\n
-            Exit 2: Asoke Road, Interchange21\n
-            Exit 3: Terminal 21, Transit to BTS Sukhumvit Line - Asok Station\n
+            Number of exits: 3
+            \nExit 1: Asoke Road, The Siam Society
+            \nExit 2: Asoke Road, Interchange21
+            \nExit 3: Terminal 21, Transit to BTS Sukhumvit Line - Asok Station
         </item>
     </string-array>
 
@@ -853,15 +853,15 @@
         <item>Queen Sirikit National Convention Centre</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Phai Singto, Rama 4 Intersection\n
-            Exit 2:	The Stock Exchange of Thailand\n
-            Exit 3: Queen Sirikit National Convention Centre\n
-            Exit 4: Soi Phai Singto\n
+            Number of exits: 4
+            \nExit 1: Soi Phai Singto, Rama 4 Intersection
+            \nExit 2: The Stock Exchange of Thailand
+            \nExit 3: Queen Sirikit National Convention Centre
+            \nExit 4: Soi Phai Singto
         </item>
     </string-array>
 
@@ -869,13 +869,13 @@
         <item>Khlong Toei</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 2\n
-            Exit 1: MEA Khlong Toei\n
-            Exit 2:	Thailand Tobacco Monopoly, Soi Rong Ngan Yasup\n
+            Number of exits: 2
+            \nExit 1: MEA Khlong Toei
+            \nExit 2: Thailand Tobacco Monopoly, Soi Rong Ngan Yasup
         </item>
     </string-array>
 
@@ -883,14 +883,14 @@
         <item>Lumphini</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Rama 4 Road\n
-            Exit 2:	South Sathorn Road\n
-            Exit 3: Wireless Road, Suan Lum Night Bazaar\n
+            Number of exits: 3
+            \nExit 1: Rama 4 Road
+            \nExit 2: South Sathorn Road
+            \nExit 3: Wireless Road, Suan Lum Night Bazaar
         </item>
     </string-array>
 
@@ -898,13 +898,13 @@
         <item>Si Lom</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 2\n
-            Exit 1: Lumpini Park, Chulalongkorn Hospital\n
-            Exit 2:	Silom Road, Dusit Thani, Transit to BTS Silom Line - Sala Deang Station\n
+            Number of exits: 2
+            \nExit 1: Lumpini Park, Chulalongkorn Hospital
+            \nExit 2: Silom Road, Dusit Thani, Transit to BTS Silom Line - Sala Deang Station
         </item>
     </string-array>
 
@@ -912,14 +912,14 @@
         <item>Sam Yan</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Hua Lamphong Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Hua Lamphong Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Wat Hua Lamphong, Si Phraya Road\n
-            Exit 2:	Phaya Thai Road, Chulalongkorn University, Sam Yan Market\n
-            Exit 3: Chamchuri Square\n
+            Number of exits: 3
+            \nExit 1: Wat Hua Lamphong, Si Phraya Road
+            \nExit 2: Phaya Thai Road, Chulalongkorn University, Sam Yan Market
+            \nExit 3: Chamchuri Square
         </item>
     </string-array>
 
@@ -927,15 +927,15 @@
         <item>Hua Lamphong</item>
         <item>Blue Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Tao Poon Station\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Tao Poon Station
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Mahapruettharam Road - Wat Trimit\n
-            Exit 2:	Bangkok Railway Station (Hua Lamphong)\n
-            Exit 3: Rongmuang Street\n
-            Exit 4: Mahanakorn Junction\n
+            Number of exits: 4
+            \nExit 1: Mahapruettharam Road - Wat Trimit
+            \nExit 2: Bangkok Railway Station (Hua Lamphong)
+            \nExit 3: Rongmuang Street
+            \nExit 4: Mahanakorn Junction
         </item>
     </string-array>
 
@@ -947,15 +947,15 @@
         <item>Khlong Bang Phai</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Arrival Platform\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: Arrival Platform
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Banbuathong Village\n
-            Exit 2:	Thanon Liap Khlong Bang Phai, Big C Distribution Center\n
-            Exit 3: Parking Building\n
-            Exit 4: Main Depot\n
+            Number of exits: 4
+            \nExit 1: Banbuathong Village
+            \nExit 2: Thanon Liap Khlong Bang Phai, Big C Distribution Center
+            \nExit 3: Parking Building
+            \nExit 4: Main Depot
         </item>
     </string-array>
 
@@ -963,15 +963,15 @@
         <item>Talad Bang Yai</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Bang Yai City Center Village, Big King Bang Yai\n
-            Exit 2:	Kanchanaphisek Road, Big C Extra\n
-            Exit 3: Rattanathibet Village, Honda Showroom\n
-            Exit 4: CentralPlaza WestGate Bang Yai, Kasemrad Hospital\n
+            Number of exits: 4
+            \nExit 1: Soi Bang Yai City Center Village, Big King Bang Yai
+            \nExit 2: Kanchanaphisek Road, Big C Extra
+            \nExit 3: Rattanathibet Village, Honda Showroom
+            \nExit 4: CentralPlaza WestGate Bang Yai, Kasemrad Hospital
         </item>
     </string-array>
 
@@ -979,15 +979,15 @@
         <item>Sam Yaek Bang Yai</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Krisada Nakhon 10 Village\n
-            Exit 2:	Rungrueang 5 Village , Parking Building\n
-            Exit 3: Soi Wat Maduea\n
-            Exit 4: Thanakan Village\n
+            Number of exits: 4
+            \nExit 1: Krisada Nakhon 10 Village
+            \nExit 2: Rungrueang 5 Village , Parking Building
+            \nExit 3: Soi Wat Maduea
+            \nExit 4: Thanakan Village
         </item>
     </string-array>
 
@@ -995,15 +995,15 @@
         <item>Bang Phlu</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Wat Leng Nei Yi 2, Wat Bang Phai\n
-            Exit 2:	Passorn Village\n
-            Exit 3: Ratchaphruek Village, Wat Suankaew\n
-            Exit 4: Wat Bang Phreak\n
+            Number of exits: 4
+            \nExit 1: Wat Leng Nei Yi 2, Wat Bang Phai
+            \nExit 2: Passorn Village
+            \nExit 3: Ratchaphruek Village, Wat Suankaew
+            \nExit 4: Wat Bang Phreak
         </item>
     </string-array>
 
@@ -1011,15 +1011,15 @@
         <item>Bang Rak Yai</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Thana Siri Village, Phanarin Village\n
-            Exit 2:	Soi Yotathikarn Nonthaburi\n
-            Exit 3: Soi Wat Bang Rak Yai\n
-            Exit 4: Bang Kruai - Sai Noi Road(South)/Bang Phlu Intersection\n
+            Number of exits: 4
+            \nExit 1: Thana Siri Village, Phanarin Village
+            \nExit 2: Soi Yotathikarn Nonthaburi
+            \nExit 3: Soi Wat Bang Rak Yai
+            \nExit 4: Bang Kruai - Sai Noi Road(South)/Bang Phlu Intersection
         </item>
     </string-array>
 
@@ -1027,15 +1027,15 @@
         <item>Bang Rak Noi Tha It</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Park and Ride, Bangchak Station\n
-            Exit 2:	Soi Bang Rak Noi 11, Ladawan Village\n
-            Exit 3: Ratchaphruek Road (South), PTT Station\n
-            Exit 4: Ratchaphruek Road (North), ESSO Station\n
+            Number of exits: 4
+            \nExit 1: Park and Ride, Bangchak Station
+            \nExit 2: Soi Bang Rak Noi 11, Ladawan Village
+            \nExit 3: Ratchaphruek Road (South), PTT Station
+            \nExit 4: Ratchaphruek Road (North), ESSO Station
         </item>
     </string-array>
 
@@ -1043,15 +1043,15 @@
         <item>Sai Ma</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Ladarom Village\n
-            Exit 2:	Soi Saimar 7\n
-            Exit 3: Suetrong Housing Rattanathibet\n
-            Exit 4: Narathip Village\n
+            Number of exits: 4
+            \nExit 1: Ladarom Village
+            \nExit 2: Soi Saimar 7
+            \nExit 3: Suetrong Housing Rattanathibet
+            \nExit 4: Narathip Village
         </item>
     </string-array>
 
@@ -1059,14 +1059,14 @@
         <item>Phra Nangklao Bridge</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 3\n
-            Exit 1: Sanam Bin Nam Raod/Soi Nonthaburi 14, Rajamangala University of Technology Suvarnabhumi\n
-            Exit 2:	Sanam Bin Nam Road/Soi Nonthaburi 13/1, Pranangklao Hospital\n
-            Exit 3: Pranangklao Pier\n
+            Number of exits: 3
+            \nExit 1: Sanam Bin Nam Raod/Soi Nonthaburi 14, Rajamangala University of Technology Suvarnabhumi
+            \nExit 2: Sanam Bin Nam Road/Soi Nonthaburi 13/1, Pranangklao Hospital
+            \nExit 3: Pranangklao Pier
         </item>
     </string-array>
 
@@ -1074,15 +1074,15 @@
         <item>Yaek Nonthaburi 1</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Liang Mueang Nonthaburi 10\n
-            Exit 2:	Soi Pracha Uthit\n
-            Exit 3: Soi Rattanathibech 30, Bangkok Bank Rattanathibet Road Branch\n
-            Exit 4: Soi Rattanathibech 28, Central Rattanathibet, Index Living Mall, Park and Ride Building\n
+            Number of exits: 4
+            \nExit 1: Soi Liang Mueang Nonthaburi 10
+            \nExit 2: Soi Pracha Uthit
+            \nExit 3: Soi Rattanathibech 30, Bangkok Bank Rattanathibet Road Branch
+            \nExit 4: Soi Rattanathibech 28, Central Rattanathibet, Index Living Mall, Park and Ride Building
         </item>
     </string-array>
 
@@ -1090,15 +1090,15 @@
         <item>Bang Krasor</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Rattanathibet 13, Nueng Condominium\n
-            Exit 2:	Soi Rattanathibet 17, Big C Rattanathibet, Toyota Nonthaburi\n
-            Exit 3: Soi Rattanathibet 24, Krung Thai Bank, Noble Thara Village\n
-            Exit 4: Soi Rattanathibet 20, Richmond Hotel\n
+            Number of exits: 4
+            \nExit 1: Soi Rattanathibet 13, Nueng Condominium
+            \nExit 2: Soi Rattanathibet 17, Big C Rattanathibet, Toyota Nonthaburi
+            \nExit 3: Soi Rattanathibet 24, Krung Thai Bank, Noble Thara Village
+            \nExit 4: Soi Rattanathibet 20, Richmond Hotel
         </item>
     </string-array>
 
@@ -1106,15 +1106,15 @@
         <item>Nonthaburi Civic Center</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Nonthaburi Civic Center\n
-            Exit 2:	Nonthaburi Police Station , Thaicom Public Company Limited\n
-            Exit 3: Soi Rattanathibet 7\n
-            Exit 4: Soi Rattanathibet 10\n
+            Number of exits: 4
+            \nExit 1: Nonthaburi Civic Center
+            \nExit 2: Nonthaburi Police Station , Thaicom Public Company Limited
+            \nExit 3: Soi Rattanathibet 7
+            \nExit 4: Soi Rattanathibet 10
         </item>
     </string-array>
 
@@ -1122,15 +1122,15 @@
         <item>Ministry of Public Health</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Tiwanon 6\n
-            Exit 2:	Public Health Station\n
-            Exit 3: Soi Tiwanon 1/1\n
-            Exit 4: Regional Revenue Office 4\n
+            Number of exits: 4
+            \nExit 1: Soi Tiwanon 6
+            \nExit 2: Public Health Station
+            \nExit 3: Soi Tiwanon 1/1
+            \nExit 4: Regional Revenue Office 4
         </item>
     </string-array>
 
@@ -1138,15 +1138,15 @@
         <item>Yaek Tiwanon</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Krungtepnon 14\n
-            Exit 2:	Soi Krungtepnon 12\n
-            Exit 3: Soi Krungtepnon 7\n
-            Exit 4: Soi Krungtepnon 11\n
+            Number of exits: 4
+            \nExit 1: Soi Krungtepnon 14
+            \nExit 2: Soi Krungtepnon 12
+            \nExit 3: Soi Krungtepnon 7
+            \nExit 4: Soi Krungtepnon 11
         </item>
     </string-array>
 
@@ -1154,15 +1154,15 @@
         <item>Wong Sawang</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Krungtepnon 14\n
-            Exit 2:	Soi Krungtepnon 12\n
-            Exit 3: Soi Krungtepnon 7\n
-            Exit 4: Soi Krungtepnon 11\n
+            Number of exits: 4
+            \nExit 1: Soi Krungtepnon 14
+            \nExit 2: Soi Krungtepnon 12
+            \nExit 3: Soi Krungtepnon 7
+            \nExit 4: Soi Krungtepnon 11
         </item>
     </string-array>
 
@@ -1170,15 +1170,15 @@
         <item>Bang Son</item>
         <item>Purple Line</item>
         <item>
-            Platform 1: Towards Tao Poon Station\n
-            Platform 2: Towards Khlong Bang Phai\n
+            Platform 1: To Tao Poon Station
+            \nPlatform 2: To Khlong Bang Phai
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Krungthep-Nonthaburi 36\n
-            Exit 2:	Soi Krungthep-Nonthaburi 34\n
-            Exit 3: Soi Krungthep-Nonthaburi 23/1\n
-            Exit 4: Soi Krungthep-Nonthaburi 25\n
+            Number of exits: 4
+            \nExit 1: Soi Krungthep-Nonthaburi 36
+            \nExit 2: Soi Krungthep-Nonthaburi 34
+            \nExit 3: Soi Krungthep-Nonthaburi 23/1
+            \nExit 4: Soi Krungthep-Nonthaburi 25
         </item>
     </string-array>
 
@@ -1186,17 +1186,17 @@
         <item>Tao Poon</item>
         <item>Blue Line, Purple Line</item>
         <item>
-            Platform 1 (3th Floor): Towards Hua Lamphong Station (Blue Line)\n
-            Platform 2 (3th Floor): Towards Hua Lamphong Station (Blue Line)\n
-            Platform 3 (4th Floor): Towards Khlong Bang Phai Station (Purple Line)\n
-            Platform 4 (4th Floor): Towards Khlong Bang Phai Station (Purple Line)\n
+            Platform 1 (3th Floor): To Hua Lamphong Station (Blue Line)
+            \nPlatform 2 (3th Floor): To Hua Lamphong Station (Blue Line)
+            \nPlatform 3 (4th Floor): To Khlong Bang Phai Station (Purple Line)
+            \nPlatform 4 (4th Floor): To Khlong Bang Phai Station (Purple Line)
         </item>
         <item>
-            Number of exits: 4\n
-            Exit 1: Soi Num Chai\n
-            Exit 2: Soi Krung Thep-Nonthaburi 1\n
-            Exit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market\n
-            Exit 4: Thanon Pracha Rat Sai 2\n
+            Number of exits: 4
+            \nExit 1: Soi Num Chai
+            \nExit 2: Soi Krung Thep-Nonthaburi 1
+            \nExit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market
+            \nExit 4: Thanon Pracha Rat Sai 2
         </item>
     </string-array>
 
