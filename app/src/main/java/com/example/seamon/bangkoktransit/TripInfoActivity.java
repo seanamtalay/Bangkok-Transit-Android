@@ -22,9 +22,17 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.location.Geocoder;
 
+import org.w3c.dom.Node;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final String TAG = "TripInfoActivity";
@@ -35,14 +43,91 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
     private Double mDestinationStationLng;
     private GoogleMap mGoogleMap;
 
+
+    public class CostAndTransit {
+        private final int cost;
+        private final int transit;
+
+        public CostAndTransit(int first, int second) {
+            this.cost = first;
+            this.transit = second;
+        }
+
+        public int getCost() {
+            return cost;
+        }
+
+        public int getNumTransit() {
+            return transit;
+        }
+    }
+
+    public class Graph {
+        private Set<Node> nodes = new HashSet<>();
+
+        public void addNode(Node nodeA) {
+            nodes.add(nodeA);
+        }
+
+        // getters and setters
+        public Set<Node> getNodes() {
+            return nodes;
+        }
+
+        public void setNodes(Set<Node> nodes) {
+            this.nodes = nodes;
+        }
+    }
+
+    public class Node {
+        private String name;
+        private List<Node> shortestPath = new LinkedList<>();
+        private Integer distance = Integer.MAX_VALUE;
+        Map<Node, Integer> adjacentNodes = new HashMap<>();
+
+        public void addDestination(Node destination, int distance) {
+            adjacentNodes.put(destination, distance);
+        }
+
+        public Node(String name) {
+            this.name = name;
+        }
+
+        public String getName(){
+            return this.name;
+        }
+
+        // getters and setters
+        public void setDistance(Integer distance){
+            this.distance = distance;
+        }
+        public Integer getDistance(){
+            return this.distance;
+        }
+
+        public Map<Node, Integer> getAdjacentNodes(){
+            return this.adjacentNodes;
+        }
+
+        public void setShortestPath(LinkedList<Node> shortestPath){
+            this.shortestPath = shortestPath;
+        }
+
+        public List<Node> getShortestPath(){
+            return this.shortestPath;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: first");
         setContentView(R.layout.activity_trip_info);
         Log.d(TAG, "onCreate: second");
-        TextView firstStationTextview = findViewById(R.id.first_station_textview);
-        TextView secondStationTextview = findViewById(R.id.second_station_textview);
+        TextView firstStationTextView = findViewById(R.id.first_station_textview);
+        TextView secondStationTextView = findViewById(R.id.second_station_textview);
+        TextView estimatedCostTextView = findViewById(R.id.estimated_cost_value);
+        TextView numTransitsTextView = findViewById(R.id.num_transits_value);
         ImageView arrowStations = findViewById(R.id.arrow_stations);
 
         arrowStations.setRotation(180);
@@ -53,13 +138,19 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         //update mDestinationStationLatLng according to the destination station name
         updateDestinationLatLng();
 
-        firstStationTextview.setText(mOriginStation);
-        secondStationTextview.setText(mDestinationStation);
+        firstStationTextView.setText(mOriginStation);
+        secondStationTextView.setText(mDestinationStation);
         Log.d(TAG, "onCreate: before if");
         if(googleServicesAvailable()){
             Log.d(TAG, "onCreate: in if");
             initMap();
         }
+
+        //set cost and numTransit value textView
+        CostAndTransit costAndTransit = getTotalCost(mOriginStation, mDestinationStation);
+        estimatedCostTextView.setText(Integer.toString(costAndTransit.getCost())+ " Baht");
+        numTransitsTextView.setText(Integer.toString(costAndTransit.getNumTransit()));
+
 
     }
 
@@ -144,45 +235,445 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
 
     }
 
-    //Calculate costs
-    private int getTotalCost(String originStation, String destinationStation){
-        //ArrayList holding station code of the ones that is a transit station
-        ArrayList<String> ARLTransitStations = new ArrayList<String>();
-        ARLTransitStations.add("A6");
-        ARLTransitStations.add("A8");
+    public List<String> getShortestDistant(String originStationCode, String destinationStationCode){
+        //initialize all the nodes first, then link them together
 
-        ArrayList<String> BTSTransitStations = new ArrayList<String>();
-        ARLTransitStations.add("N8");
-        ARLTransitStations.add("N2");
-        ARLTransitStations.add("CEN");
-        ARLTransitStations.add("E4");
-        ARLTransitStations.add("S2");
+        //containers, all+1 so that indexing will be easier, Station A1 = ARLNodesArray_Ax[1] instead of ARLNodesArray_Ax[0]
+        Node ARLNodesArray_Ax[] = new Node[8+1];  //ARL
+        Node BTSNodesArray_Nx[] = new Node[8+1];  //BTS that starts with N (mostly Sukhumvit line)
+        Node BTSNodesArray_Ex[] = new Node[15+1]; //BTS that starts with E (mostly Sukhumvit line)
+        Node BTSNodesArray_CEN[] = new Node[1]; //BTS CEN
+        Node BTSNodesArray_Wx[] = new Node[1+1];  //BTS that starts with W (mostly Silom line)
+        Node BTSNodesArray_Sx[] = new Node[12+1]; //BTS that starts with S (mostly Silom line)
+        Node MRTNodesArray_BLx[] = new Node[28+1];//MRT Blue ,only have 19 member in it but set as 28 because indexing
+        Node MRTNodesArray_PPx[] = new Node[16+1];//MRT Purple
 
-        ArrayList<String> MRTTransitStations = new ArrayList<String>();
-        MRTTransitStations.add("BL10");
-        MRTTransitStations.add("BL13");
-        MRTTransitStations.add("BL21");
-        MRTTransitStations.add("BL22");
-        MRTTransitStations.add("BL26");
+        //initialize nodes
+        for(int i = 1; i <= 8; i++){
+            String stationCode = "A" + (i);
+            ARLNodesArray_Ax[i] = new Node(stationCode);
+        }
+        for(int i = 1; i <= 8; i++){
+            String stationCode = "N" + (i);
+            BTSNodesArray_Nx[i] = new Node(stationCode);
+        }
+        for(int i = 1; i <= 15; i++){
+            String stationCode = "E" + (i);
+            BTSNodesArray_Ex[i] = new Node(stationCode);
+        }
+        for(int i = 0; i < 1; i++){
+            String stationCode = "CEN"; //+1 because array starts from zero
+            BTSNodesArray_CEN[i] = new Node(stationCode);
+        }
+        for(int i = 1; i <= 1; i++){
+            String stationCode = "W" + (i);
+            BTSNodesArray_Wx[i] = new Node(stationCode);
+        }
+        for(int i = 1; i <= 12; i++){
+            String stationCode = "S" + (i); //+1 because array starts from zero
+            BTSNodesArray_Sx[i] = new Node(stationCode);
+        }
+        for(int i = 10; i <= 28; i++){
+            String stationCode = "BL" + (i);
+            MRTNodesArray_BLx[i] = new Node(stationCode);
+        }
+        for(int i = 1; i <= 16; i++){
+            String stationCode = "PP" + (i);
+            MRTNodesArray_PPx[i] = new Node(stationCode);
+        }
 
-        //Get the station code
-        String[] splitedNameDes = destinationStation.split("\\s+");
-        String destinationStationCode = splitedNameDes[0];
-        String[] splitedNameOri = originStation.split("\\s+");
-        String originStationCode = splitedNameOri[0];
+        //add adjacent nodes to each node
+        //ARL
+        for(int i = 1; i <= 8; i++){
+            if(ARLNodesArray_Ax[i].getName().equals("A1")){
+                //terminal station1
+                ARLNodesArray_Ax[i].addDestination(ARLNodesArray_Ax[i+1], 1);
+            }
+            else if(ARLNodesArray_Ax[i].getName().equals("A8")){
+                //terminal station2
+                ARLNodesArray_Ax[i].addDestination(ARLNodesArray_Ax[i-1], 1);
+            }
+            else {
+                ARLNodesArray_Ax[i].addDestination(ARLNodesArray_Ax[i+1], 1);
+                ARLNodesArray_Ax[i].addDestination(ARLNodesArray_Ax[i-1], 1);
+            }
+            //ARL w/ transits
+            if(ARLNodesArray_Ax[i].getName().equals("A6")){ // Linked with BL21
+                ARLNodesArray_Ax[i].addDestination(MRTNodesArray_BLx[21],1);
+            }
+            if(ARLNodesArray_Ax[i].getName().equals("A8")){ //Linked with N2
+                ARLNodesArray_Ax[i].addDestination(BTSNodesArray_Nx[2],1);
+            }
+        }
 
-        int totalCost = 0;
+        //BTS N
+        for(int i = 1; i <= 8; i++){
+            if(BTSNodesArray_Nx[i].getName().equals("N1")){
+                //terminal station1
+                BTSNodesArray_Nx[i].addDestination(BTSNodesArray_Nx[i+1], 1);
+                BTSNodesArray_Nx[i].addDestination(BTSNodesArray_CEN[0], 1); //CEN
+            }
+            else if(BTSNodesArray_Nx[i].getName().equals("N8")){
+                //terminal station2
+                BTSNodesArray_Nx[i].addDestination(BTSNodesArray_Nx[i-1], 1);
+            }
+            else {
+                BTSNodesArray_Nx[i].addDestination(BTSNodesArray_Nx[i+1], 1);
+                BTSNodesArray_Nx[i].addDestination(BTSNodesArray_Nx[i-1], 1);
+            }
+            //BTS N w/ transits
+            if(BTSNodesArray_Nx[i].getName().equals("N8")){ // Linked with BL13
+                BTSNodesArray_Nx[i].addDestination(MRTNodesArray_BLx[13],1);
+            }
+            if(BTSNodesArray_Nx[i].getName().equals("N2")){ //Linked with A8
+                BTSNodesArray_Nx[i].addDestination(ARLNodesArray_Ax[8],1);
+            }
+        }
 
+        //BTS E
+        for(int i = 1; i <= 15; i++){
+            if(BTSNodesArray_Ex[i].getName().equals("E1")){
+                //terminal station1
+                BTSNodesArray_Ex[i].addDestination(BTSNodesArray_Ex[i+1], 1);
+                BTSNodesArray_Ex[i].addDestination(BTSNodesArray_CEN[0], 1); //CEN
+            }
+            else if(BTSNodesArray_Ex[i].getName().equals("E15")){
+                //terminal station2
+                BTSNodesArray_Ex[i].addDestination(BTSNodesArray_Ex[i-1], 1);
+            }
+            else {
+                BTSNodesArray_Ex[i].addDestination(BTSNodesArray_Ex[i+1], 1);
+                BTSNodesArray_Ex[i].addDestination(BTSNodesArray_Ex[i-1], 1);
+            }
+            //BTS E w/ transits
+            if(BTSNodesArray_Ex[i].getName().equals("E4")){ // Linked with BL22
+                BTSNodesArray_Ex[i].addDestination(MRTNodesArray_BLx[22],1);
+            }
+        }
+
+        //BTS W
+        for(int i = 1; i <= 1; i++){
+            if(BTSNodesArray_Wx[i].getName().equals("W1")){
+                //terminal station1
+                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_CEN[0], 1); //CEN
+            }
+            /*
+            else if(BTSNodesArray_Wx[i].getName().equals("XX")){
+                //terminal station2
+                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i-1], 1);
+            }
+            else {
+                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i+1], 1);
+                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i-1], 1);
+            }
+            */
+        }
+
+        //BTS S
+        for(int i = 1; i <= 12; i++){
+            if(BTSNodesArray_Sx[i].getName().equals("S1")){
+                //terminal station1
+                BTSNodesArray_Sx[i].addDestination(BTSNodesArray_Sx[i+1], 1);
+                BTSNodesArray_Sx[i].addDestination(BTSNodesArray_CEN[0], 1); //CEN
+            }
+            else if(BTSNodesArray_Sx[i].getName().equals("S12")){
+                //terminal station2
+                BTSNodesArray_Sx[i].addDestination(BTSNodesArray_Sx[i-1], 1);
+            }
+            else {
+                BTSNodesArray_Sx[i].addDestination(BTSNodesArray_Sx[i+1], 1);
+                BTSNodesArray_Sx[i].addDestination(BTSNodesArray_Sx[i-1], 1);
+            }
+            //BTS S w/ transits
+            if(BTSNodesArray_Sx[i].getName().equals("S2")){ // Linked with BL26
+                BTSNodesArray_Sx[i].addDestination(MRTNodesArray_BLx[26],1);
+            }
+        }
+
+        //BTS CEN
+        BTSNodesArray_CEN[0].addDestination(BTSNodesArray_Sx[1],1);
+        BTSNodesArray_CEN[0].addDestination(BTSNodesArray_Ex[1],1);
+        BTSNodesArray_CEN[0].addDestination(BTSNodesArray_Nx[1],1);
+        BTSNodesArray_CEN[0].addDestination(BTSNodesArray_Wx[1],1);
+
+        //MRT BL
+        for(int i = 10; i <= 28; i++){
+            if(MRTNodesArray_BLx[i].getName().equals("BL10")){
+                //terminal station1
+                MRTNodesArray_BLx[i].addDestination(MRTNodesArray_BLx[i+1], 1);
+            }
+            else if(MRTNodesArray_BLx[i].getName().equals("BL28")){
+                //terminal station2
+                MRTNodesArray_BLx[i].addDestination(MRTNodesArray_BLx[i-1], 1);
+            }
+            else {
+                MRTNodesArray_BLx[i].addDestination(MRTNodesArray_BLx[i+1], 1);
+                MRTNodesArray_BLx[i].addDestination(MRTNodesArray_BLx[i-1], 1);
+            }
+            //MRT BL w/ transits
+            if(MRTNodesArray_BLx[i].getName().equals("BL10")){ // Linked with PP16
+                MRTNodesArray_BLx[i].addDestination(MRTNodesArray_PPx[16],1);
+            }
+            if(MRTNodesArray_BLx[i].getName().equals("BL13")){ // Linked with N8
+                MRTNodesArray_BLx[i].addDestination(BTSNodesArray_Nx[8],1);
+            }
+            if(MRTNodesArray_BLx[i].getName().equals("BL21")){ // Linked with A6
+                MRTNodesArray_BLx[i].addDestination(ARLNodesArray_Ax[6],1);
+            }
+            if(MRTNodesArray_BLx[i].getName().equals("BL22")){ // Linked with E4
+                MRTNodesArray_BLx[i].addDestination(BTSNodesArray_Ex[4],1);
+            }
+            if(MRTNodesArray_BLx[i].getName().equals("BL26")){ // Linked with S2
+                MRTNodesArray_BLx[i].addDestination(BTSNodesArray_Sx[2],1);
+            }
+        }
+
+        //MRT PP
+        for(int i = 1; i <= 16; i++){
+            if(MRTNodesArray_PPx[i].getName().equals("PP1")){
+                //terminal station1
+                MRTNodesArray_PPx[i].addDestination(MRTNodesArray_PPx[i+1], 1);
+            }
+            else if(MRTNodesArray_PPx[i].getName().equals("PP16")){
+                //terminal station2
+                MRTNodesArray_PPx[i].addDestination(MRTNodesArray_PPx[i-1], 1);
+            }
+            else {
+                MRTNodesArray_PPx[i].addDestination(MRTNodesArray_PPx[i+1], 1);
+                MRTNodesArray_PPx[i].addDestination(MRTNodesArray_PPx[i-1], 1);
+            }
+            //MRT PP w/ transits
+            if(MRTNodesArray_PPx[i].getName().equals("PP16")){ // Linked with BL10
+                MRTNodesArray_PPx[i].addDestination(MRTNodesArray_BLx[10],1);
+            }
+        }
+
+        //create graph and add everything in
+        Graph graph = new Graph();
+        for(Node node : ARLNodesArray_Ax)
+            graph.addNode(node);
+        for(Node node : BTSNodesArray_CEN)
+            graph.addNode(node);
+        for(Node node : BTSNodesArray_Nx)
+            graph.addNode(node);
+        for(Node node : BTSNodesArray_Ex)
+            graph.addNode(node);
+        for(Node node : BTSNodesArray_Wx)
+            graph.addNode(node);
+        for(Node node : BTSNodesArray_Sx)
+            graph.addNode(node);
+        for(Node node : MRTNodesArray_BLx)
+            graph.addNode(node);
+        for(Node node : MRTNodesArray_PPx)
+            graph.addNode(node);
+
+        //parse input
         // get only line code eg. BL10 -> BL, N2 -> N
         String originLineCode = originStationCode.replaceAll("[^A-Za-z]+", "");
         String destinationLineCode = destinationStationCode.replaceAll("[^A-Za-z]+", "");
 
-        //if origin and destination are on the same line
-        if(originLineCode.equals(destinationLineCode)){
-            totalCost = assignGetCostFunc(originStationCode, destinationStationCode);
+
+        int originStationNumber;
+        int destinationStationNumber;
+        //get only number digits eg. BL10 -> 10, N2 -> 2 (for CEN, return 0)
+        if(!originLineCode.equals("CEN"))
+            originStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
+        else
+            originStationNumber = 0;
+        if(!destinationLineCode.equals("CEN"))
+            destinationStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
+        else
+            destinationStationNumber = 0;
+
+        //perform Dijkstra on graph
+        if(originLineCode.equals("A"))
+            graph = calculateShortestPathFromSource(graph, ARLNodesArray_Ax[originStationNumber]);
+        else if(originLineCode.equals("N"))
+            graph = calculateShortestPathFromSource(graph, BTSNodesArray_Nx[originStationNumber]);
+        else if(originLineCode.equals("E"))
+            graph = calculateShortestPathFromSource(graph, BTSNodesArray_Ex[originStationNumber]);
+        else if(originLineCode.equals("W"))
+            graph = calculateShortestPathFromSource(graph, BTSNodesArray_Wx[originStationNumber]);
+        else if(originLineCode.equals("S"))
+            graph = calculateShortestPathFromSource(graph, BTSNodesArray_Sx[originStationNumber]);
+        else if(originLineCode.equals("CEN"))
+            graph = calculateShortestPathFromSource(graph, BTSNodesArray_CEN[originStationNumber]);
+        else if(originLineCode.equals("BL"))
+            graph = calculateShortestPathFromSource(graph, MRTNodesArray_BLx[originStationNumber]);
+        else if(originLineCode.equals("PP"))
+            graph = calculateShortestPathFromSource(graph, MRTNodesArray_PPx[originStationNumber]);
+
+        List<String> shortestStations = new ArrayList<String>();
+
+        //get the shortest path from origin to destination as a list of String
+        List<Node> shortestPathOriToDes = BTSNodesArray_CEN[0].getShortestPath();
+
+        if(destinationLineCode.equals("A"))
+            shortestPathOriToDes = ARLNodesArray_Ax[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("N"))
+            shortestPathOriToDes = BTSNodesArray_Nx[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("E"))
+            shortestPathOriToDes = BTSNodesArray_Ex[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("W"))
+            shortestPathOriToDes = BTSNodesArray_Wx[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("S"))
+            shortestPathOriToDes = BTSNodesArray_Sx[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("CEN"))
+            shortestPathOriToDes = BTSNodesArray_CEN[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("BL"))
+            shortestPathOriToDes = MRTNodesArray_BLx[destinationStationNumber].getShortestPath();
+        else if(destinationLineCode.equals("PP"))
+            shortestPathOriToDes = MRTNodesArray_PPx[destinationStationNumber].getShortestPath();
+
+        for(Node node2 : shortestPathOriToDes){
+            shortestStations.add(node2.getName());
+            Log.d(TAG, "getShortestDistant: Shortest path ori - des: " + node2.getName() );
+        }
+        shortestStations.add(destinationStationCode);
+        Log.d(TAG, "getShortestDistant: Shortest path ori - des: " + destinationStationCode );
+
+        return shortestStations;
+
+
+    }
+
+    // source: http://www.baeldung.com/java-dijkstra
+    public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
+        source.setDistance(0);
+
+        Set<Node> settledNodes = new HashSet<>();
+        Set<Node> unsettledNodes = new HashSet<>();
+
+        unsettledNodes.add(source);
+
+        while (unsettledNodes.size() != 0) {
+            Node currentNode = getLowestDistanceNode(unsettledNodes);
+            unsettledNodes.remove(currentNode);
+            for (Map.Entry< Node, Integer> adjacencyPair:
+                    currentNode.getAdjacentNodes().entrySet()) {
+                Node adjacentNode = adjacencyPair.getKey();
+                Integer edgeWeight = adjacencyPair.getValue();
+                if (!settledNodes.contains(adjacentNode)) {
+                    calculateMinimumDistance(adjacentNode, edgeWeight, currentNode);
+                    unsettledNodes.add(adjacentNode);
+                }
+            }
+            settledNodes.add(currentNode);
+        }
+        return graph;
+    }
+
+
+
+    private static Node getLowestDistanceNode(Set < Node > unsettledNodes) {
+        Node lowestDistanceNode = null;
+        int lowestDistance = Integer.MAX_VALUE;
+        for (Node node: unsettledNodes) {
+            int nodeDistance = node.getDistance();
+            if (nodeDistance < lowestDistance) {
+                lowestDistance = nodeDistance;
+                lowestDistanceNode = node;
+            }
+        }
+        return lowestDistanceNode;
+    }
+
+    private static void calculateMinimumDistance(Node evaluationNode,
+                                                 Integer edgeWeigh, Node sourceNode) {
+        Integer sourceDistance = sourceNode.getDistance();
+        if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
+            evaluationNode.setDistance(sourceDistance + edgeWeigh);
+            LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
+            shortestPath.add(sourceNode);
+            evaluationNode.setShortestPath(shortestPath);
+        }
+    }
+
+    //Calculate costs from station full names
+    //return as a CostAndTransit object type, which contains the cost and number of transit as int
+    private CostAndTransit getTotalCost(String originStationRaw, String destinationStationRaw){
+        //Get the station code
+        String[] splittedNameDes = destinationStationRaw.split("\\s+");
+        String destinationStation = splittedNameDes[0];
+        String[] splittedNameOri = originStationRaw.split("\\s+");
+        String originStation = splittedNameOri[0];
+
+        int numTransits = 0;
+        int totalCost = 0;
+
+        //if origin and destination are on the same line (BTS, ARL, MRT)
+        if(checkIfSameLine(originStation, destinationStation)){
+            totalCost = totalCost + assignGetCostFunc(originStation, destinationStation);
+            if(!originStation.equals("CEN") && !destinationStation.equals("CEN")) {
+                if (!getLineCode(originStation).equals(getLineCode(destinationStation))) {
+                    numTransits++;
+                }
+            }
+        }
+        // if they are not the same line
+        else if(!checkIfSameLine(originStation, destinationStation)){
+            List<String> shortestStationPath = getShortestDistant(originStation, destinationStation);
+
+            String previousTempStation = originStation;
+            String checkPointStation = originStation;
+            String prePreviousTempStation = originStation;
+            for(String currentStation : shortestStationPath){
+                Log.d(TAG, "getTotalCost: output Stations: "+ currentStation);
+                if(!checkIfSameLine(previousTempStation, currentStation)){
+                    totalCost = totalCost + assignGetCostFunc(checkPointStation, previousTempStation);
+                    Log.d(TAG, "getTotalCost: Total cost1 = "+ totalCost);
+                    checkPointStation = currentStation;
+                    //numTransits++;
+                }
+                else if(currentStation.equals(destinationStation)){
+                    totalCost = totalCost + assignGetCostFunc(checkPointStation, currentStation);
+                    Log.d(TAG, "getTotalCost: Total cost2 = "+ totalCost);
+                }
+
+                //check if transit
+                if(previousTempStation.equals("CEN") || currentStation.equals("CEN")){
+                    if((getLineCode(prePreviousTempStation).equals("N") || getLineCode(prePreviousTempStation).equals("E")) &&
+                            (getLineCode(currentStation).equals("W") || getLineCode(currentStation).equals("S"))){
+                        numTransits++;
+                    }
+                    else if((getLineCode(prePreviousTempStation).equals("W") || getLineCode(prePreviousTempStation).equals("S")) &&
+                            (getLineCode(currentStation).equals("N") || getLineCode(currentStation).equals("E"))){
+                        numTransits++;
+                    }
+                }
+                else if(!getLineCode(previousTempStation).equals(getLineCode(currentStation))){
+                    numTransits++;
+                }
+
+                prePreviousTempStation = previousTempStation;
+                previousTempStation = currentStation;
+            }
         }
 
-        return totalCost;
+        Log.d(TAG, "getTotalCost: Final Cost & Transit are: "+ totalCost +" And "+numTransits);
+        return new CostAndTransit(totalCost, numTransits);
+    }
+
+    //return only line code eg. BL12 -> Bl, A2 -> A.
+    private String getLineCode(String station){
+        return station.replaceAll("[^A-Za-z]+", "");
+    }
+
+    //compare two stations code as a string and return true if they are in the same line (BTS is NEWSCEN, MRT is PPBL, ARL is A)
+    private boolean checkIfSameLine(String station1, String station2){
+        String[] ARLCode = {"A"};
+        String[] BTSCode = {"CEN", "N", "E", "W", "S"};
+        String[] MRTCode = {"PP", "BL"};
+        String station1LineCode = station1.replaceAll("[^A-Za-z]+", "");
+        String station2LineCode = station2.replaceAll("[^A-Za-z]+", "");
+
+        if((Arrays.asList(ARLCode).contains(station1LineCode) && Arrays.asList(ARLCode).contains(station2LineCode))||
+                (Arrays.asList(BTSCode).contains(station1LineCode) && Arrays.asList(BTSCode).contains(station2LineCode))||
+                (Arrays.asList(MRTCode).contains(station1LineCode) && Arrays.asList(MRTCode).contains(station2LineCode))) {
+            return true;
+        }
+        else
+            return false;
     }
 
     //both station has to be on the same line
@@ -192,9 +683,18 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         String originLineCode = originStationCode.replaceAll("[^A-Za-z]+", "");
         String destinationLineCode = destinationStationCode.replaceAll("[^A-Za-z]+", "");
 
-        //get only number digits eg. BL10 -> 10, N2 -> 2
-        int originStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+",""));
-        int destinationStationNumber = Integer.parseInt(destinationStationCode.replaceAll("\\D+",""));
+        int originStationNumber;
+        int destinationStationNumber;
+        //get only number digits eg. BL10 -> 10, N2 -> 2 (for CEN, return 0)
+        if(!originLineCode.equals("CEN"))
+            originStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
+        else
+            originStationNumber = 0;
+        if(!destinationLineCode.equals("CEN"))
+            destinationStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
+        else
+            destinationStationNumber = 0;
+
         //ARL
         if(originLineCode.equals("A")){
             totalCost = getCostARL(originStationCode, destinationStationCode);
@@ -362,6 +862,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
 
         return totalCost;
     }
+
 
     private int getCostARL(String originStationCode, String destinationStationCode){
         // pricing based on http://www.srtet.co.th/index.php/th/cityline-calculate/cityline-calculate
