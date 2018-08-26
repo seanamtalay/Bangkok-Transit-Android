@@ -18,6 +18,6 @@ The goal of this app is to create a clean & easy to use material-designed transi
 
 
 # Screenshots
-<img src="readme_resources/screenshot_tab1.png" width="280"/> <img src="readme_resources/screenshot_tab3.png" width="280"/> <img src="readme_resources/screenshot_tripInfo.png" width="280"/>
+<img src="readme_resources/screenshot_tab1.png" width="280"/>   <img src="readme_resources/screenshot_tab3.png" width="280"/>   <img src="readme_resources/screenshot_tripInfo.png" width="280"/>
 
 Created by Namtalay L.
