@@ -17,20 +17,22 @@
             \nExit 1: Suvarnabhumi Airport
             \nExit 2: Novotel Bangkok Suvarnabhumi Airport\n
         </item>
+        <item>13.698134, 100.752359</item>
     </string-array>
 
     <string-array name="A2">
-        <item>Lat Krabang Station</item>
+        <item>Lat Krabang</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
             \nPlatform 2: To Phaya Thai Station\n
         </item>
         <item>Number of exits: 2\n</item>
+        <item>13.727918, 100.749087</item>
     </string-array>
 
     <string-array name="A3">
-        <item>Ban Thap Chang Station</item>
+        <item>Ban Thap Chang</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -39,10 +41,11 @@
         <item>
             Number of exits: 2\n
         </item>
+        <item>13.733143, 100.688732</item>
     </string-array>
 
     <string-array name="A4">
-        <item>Hua Mak Station</item>
+        <item>Hua Mak</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -51,10 +54,11 @@
         <item>
             Number of exits: 2
         </item>
+        <item>13.738225, 100.645147</item>
     </string-array>
 
     <string-array name="A5">
-        <item>Ramkhamhaeng Station</item>
+        <item>Ramkhamhaeng</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -63,10 +67,11 @@
         <item>
             Number of exits: 2
         </item>
+        <item>13.743310, 100.600137</item>
     </string-array>
 
     <string-array name="A6">
-        <item>Makkasan Station</item>
+        <item>Makkasan</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -76,10 +81,11 @@
             Number of exits: 2
             \nExit 1: Transits to MRT Blue Line - Phetchaburi Station
         </item>
+        <item>13.751535, 100.560762</item>
     </string-array>
 
     <string-array name="A7">
-        <item>Ratchaprarop Station</item>
+        <item>Ratchaprarop</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -88,10 +94,11 @@
         <item>
             Number of exits: 2
         </item>
+        <item>13.755238, 100.541814</item>
     </string-array>
 
     <string-array name="A8">
-        <item>Phaya Thai Station</item>
+        <item>Phaya Thai</item>
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
@@ -105,6 +112,8 @@
             \nExit 4: Florida Hotel Bangkok, Wannasorn Tower
             \nExit 5: Transits to BTS Sukhumvit Line - Phaya Tai Station
         </item>
+        <item>13.756781, 100.534975</item>
+
     </string-array>
 
     <!-- =======================================================================  -->
@@ -112,7 +121,7 @@
     <!-- =======================================================================  -->
 
     <string-array name="N8">
-        <item>Mo Chit Station</item>
+        <item>Mo Chit</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -126,10 +135,11 @@
             \nExit 4: Parking lot
             \nNote: All exits are connected to MRT Blue Line transit
         </item>
+        <item>13.802727, 100.553826</item>
     </string-array>
 
     <string-array name="N7">
-        <item>Saphan Khwai Station</item>
+        <item>Saphan Khwai</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -141,10 +151,11 @@
             \nExit 2: Big-C, Paolo Hospital
             \nExit 3: Wat PhaiTan
         </item>
+        <item>13.794180, 100.549761</item>
     </string-array>
 
     <string-array name="N5">
-        <item>Ari Station</item>
+        <item>Ari</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -155,10 +166,11 @@
             \nExit 2: SME Tower
             \nExit 4: La Villa Ari
         </item>
+        <item>13.779776, 100.544637</item>
     </string-array>
 
     <string-array name="N4">
-        <item>Sanam Pao Station</item>
+        <item>Sanam Pao</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -169,10 +181,11 @@
             \nExit 1: Phyathai 2 Hospital
             \nExit 2: Royal Thai Army Radio and Television Channel 5
         </item>
+        <item>13.772631, 100.542049</item>
     </string-array>
 
     <string-array name="N3">
-        <item>Victory Monument Station</item>
+        <item>Victory Monument</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -186,10 +199,11 @@
             \nExit 4: Girl Guides Association of Thailand
             \nNote: Sky Walk platform is available all around the Station
         </item>
+        <item>13.762784, 100.537080</item>
     </string-array>
 
     <string-array name="N2">
-        <item>Phaya Thai Station</item>
+        <item>Phaya Thai</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -203,10 +217,11 @@
             \nExit 4: Florida Hotel Bangkok, Wannasorn Tower
             \nExit 5: Transits to Airport Rail Link - Phaya Tai Station
         </item>
+        <item>13.756815, 100.533724</item>
     </string-array>
 
     <string-array name="N1">
-        <item>Ratchathewi Station</item>
+        <item>Ratchathewi</item>
         <item>Sukhumvit Line</item>
         <item>
             Platform 1: To Samrong Station
@@ -217,10 +232,11 @@
             \nExit 1: Asia Hotel Bangkok
             \nExit 2: Hollywood Street
         </item>
+        <item>13.751922, 100.531565</item>
     </string-array>
 
     <string-array name="CEN">
-        <item>Siam Station</item>
+        <item>Siam</item>
         <item>Sukhumvit Line, Silom Line</item>
         <item>
             Platform 1 (3th Floor): To Samrong Station - Sukhumvit Line
@@ -237,6 +253,7 @@
             \nExit 5: Siam Paragon, Sea Life Bangkok Ocean World
             \nExit 6: Siam Square, Sky Walk to Central World and Chit Lom Station
         </item>
+        <item>13.745531, 100.534592</item>
     </string-array>
 
     <string-array name="E1">
@@ -256,6 +273,7 @@
             \nExit 6: Mercury Tower
             \nExit 7: Sky Walk to Central World and Siam Station
         </item>
+        <item>13.744144, 100.543068</item>
     </string-array>
 
     <string-array name="E2">
@@ -270,6 +288,7 @@
             \nExit 4: Ploenchit Center
             \nExit 5: Central Embassy, Netherlands Embassy
         </item>
+        <item>13.743082, 100.548833</item>
     </string-array>
 
     <string-array name="E3">
@@ -284,6 +303,7 @@
             \nExit 2: Two Pacific Place
             \nExit 3: Ambassador Hotel
         </item>
+        <item>13.740538, 100.555400</item>
     </string-array>
 
     <string-array name="E4">
@@ -303,6 +323,7 @@
             \nExit 6: Interchange21
             \nExit 7: Terminal 21
         </item>
+        <item>13.737042, 100.560387</item>
     </string-array>
 
     <string-array name="E5">
@@ -318,6 +339,7 @@
             \nExit 2: Emporium
             \nExit 6: Emporium, Benchasiri Park
         </item>
+        <item>13.730426, 100.569762</item>
     </string-array>
 
     <string-array name="E6">
@@ -331,6 +353,7 @@
             Number of exits: 4
             \nExit 1: Bangkok Prep School
         </item>
+        <item>13.724107, 100.578670</item>
     </string-array>
 
     <string-array name="E7">
@@ -346,6 +369,7 @@
             \nExit 3: Sukumvit Hospital
             \nExit 4: Gateway Ekamai
         </item>
+        <item>13.719595, 100.585086</item>
     </string-array>
 
     <string-array name="E8">
@@ -359,6 +383,7 @@
             Number of exits: 4
             \nExit 1: Jasmine Resort Hotel
         </item>
+        <item>13.715182, 100.591273</item>
     </string-array>
 
     <string-array name="E9">
@@ -373,6 +398,7 @@
             \nExit 2: Tesco Lotus
             \nExit 3: Century Movie Plaza
         </item>
+        <item>13.705620, 100.600999</item>
     </string-array>
 
     <string-array name="E10">
@@ -387,6 +413,7 @@
             \nExit 3: Bangkok Technology School
             \nExit 5: Samahan Suksa School
         </item>
+        <item>13.696781, 100.605319</item>
     </string-array>
 
     <string-array name="E11">
@@ -400,6 +427,7 @@
             Number of exits: 6
             \nExit 6: Anglo Singapore International School, WHIZDOM 101
         </item>
+        <item>13.689288, 100.608985</item>
     </string-array>
 
     <string-array name="E12">
@@ -415,6 +443,7 @@
             \nExit 3: Thai Meteorological Department
             \nExit 5: Thai Meteorological Department
         </item>
+        <item>13.679868, 100.609453</item>
     </string-array>
 
     <string-array name="E13">
@@ -431,6 +460,7 @@
             \nExit 5: City Home Sukhumvit 2, Udom Suk Market
             \nExit 6: BITEC Bang Na
         </item>
+        <item>13.668181, 100.604654</item>
     </string-array>
 
     <string-array name="E14">
@@ -444,6 +474,7 @@
             Number of exits: 5
             \nExit 1: Centerpoint Studio
         </item>
+        <item>13.661243, 100.601805</item>
     </string-array>
 
     <string-array name="E15">
@@ -458,6 +489,7 @@
             \nExit 1: Imperial World Samrong, Samrong Market
             \nExit 3: Sam Rong Nuea Police Station
         </item>
+        <item>13.646739, 100.595861</item>
     </string-array>
 
 
@@ -480,6 +512,7 @@
             \nExit 4: MBK Center
             \nNote: Exit 3 and 4 are linked to the Sky Walk to Siam Discovery and Siam Square
         </item>
+        <item>13.746503, 100.529117</item>
     </string-array>
 
     <!-- CEN Siam Station-->
@@ -497,6 +530,7 @@
             \nExit 3: Police General Hospital
             \nExit 4: Anantara Siam Bangkok Hotel
         </item>
+        <item>13.739219, 100.539411</item>
     </string-array>
 
     <string-array name="S2">
@@ -515,6 +549,7 @@
             \nExit 5: Robinson Department Store
             \nExit 6: Walk Way transfer to MRT Blue Line - Silom Station
         </item>
+        <item>13.728502, 100.534245</item>
     </string-array>
 
     <string-array name="S3">
@@ -531,6 +566,7 @@
             \nExit 3: MahaNakhon, MahaNakhon CUBE
             \nExit 4: The Heritage Silom, Trinity Silom Hotel
         </item>
+        <item>13.723963, 100.529191</item>
     </string-array>
 
     <string-array name="S5">
@@ -546,6 +582,7 @@
             \nExit 2: Thai CC Tower, King Royal Garden Inn
             \nExit 4: King Mongkut's University of Technology Thonburi, Bangkok Code
         </item>
+        <item>13.719233, 100.521530</item>
     </string-array>
 
     <string-array name="S6">
@@ -560,6 +597,7 @@
             \nExit 1: Harbour
             \nExit 2: Sathorn Pier
         </item>
+        <item>13.718810, 100.514156</item>
     </string-array>
 
     <string-array name="S7">
@@ -575,6 +613,7 @@
             \nExit 2: Ideo Sathorn-Taksin
             \nExit 3: Hive Sathorn
         </item>
+        <item>13.720949, 100.502863</item>
     </string-array>
 
     <string-array name="S8">
@@ -589,6 +628,7 @@
             \nExit 1: Sky Walk
             \nExit 2: Teal Sathor, Sky Walk
         </item>
+        <item>13.721106, 100.495209</item>
     </string-array>
 
     <string-array name="S9">
@@ -601,6 +641,7 @@
         <item>
             Number of exits: 4
         </item>
+        <item>13.719306, 100.486033</item>
     </string-array>
 
     <string-array name="S10">
@@ -613,6 +654,7 @@
         <item>
             Number of exits: 4
         </item>
+        <item>13.714252, 100.476753</item>
     </string-array>
 
     <string-array name="S11">
@@ -625,6 +667,7 @@
         <item>
             Number of exits: 5
         </item>
+        <item>13.713027, 100.469001</item>
     </string-array>
 
     <string-array name="S12">
@@ -637,6 +680,7 @@
         <item>
             Number of exits: 4
         </item>
+        <item>13.720629, 100.457665</item>
     </string-array>
 
     <!-- =======================================================================  -->
@@ -659,6 +703,7 @@
             \nExit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market
             \nExit 4: Thanon Pracha Rat Sai 2
         </item>
+        <item>13.806205, 100.530828</item>
     </string-array>
 
     <string-array name="BL11">
@@ -673,6 +718,7 @@
             \nExit 1: Thoet Damri Road, Bang Sue Railway Station(Northbound)
             \nExit 2: Rot Fai Road,Bang Sue Railway Station(Southbound)
         </item>
+        <item>13.803385, 100.539344</item>
     </string-array>
 
     <string-array name="BL12">
@@ -688,6 +734,7 @@
             \nExit 2: Chatuchak Weekend Market, Kamphaeng Phet 2 Road, Chatuchak Weekend Market
             \nExit 3: Farmers Market Organization, Kamphaeng Phet Road
         </item>
+        <item>13.797728, 100.548365</item>
     </string-array>
 
     <string-array name="BL13">
@@ -704,6 +751,7 @@
             \nExit 3: Transit to BTS Sukhumvit Line - Mo Chit Station
             \nExit 4: Civil Aviation Training Centre, Department of Land Transport
         </item>
+        <item>13.802133, 100.552996</item>
     </string-array>
 
     <string-array name="BL14">
@@ -721,6 +769,7 @@
             \nExit 4: Lat Phrao Intersection
             \nExit 5: Soi Lat Phrao 1
         </item>
+        <item>13.814287, 100.560164</item>
     </string-array>
 
     <string-array name="BL15">
@@ -738,6 +787,7 @@
             \nExit 4: Soi Lat Phrao 17
             \nExit 5: MRTA Park and Ride Building
         </item>
+        <item>13.805672, 100.573950</item>
     </string-array>
 
     <string-array name="BL16">
@@ -754,6 +804,7 @@
             \nExit 3: Soi Ratchadaphisek 26
             \nExit 4: Soi Ratchadaphisek 24
         </item>
+        <item>13.798320, 100.574386</item>
     </string-array>
 
     <string-array name="BL17">
@@ -770,6 +821,7 @@
             \nExit 3: Soi Ratchadaphisek 18
             \nExit 4: Soi Ratchadaphisek 17
         </item>
+        <item>13.790111, 100.574241</item>
     </string-array>
 
     <string-array name="BL18">
@@ -786,6 +838,7 @@
             \nExit 3: Prachasongkroa Road
             \nExit 4: Kunnatee Ruttaram Wittayakom School
         </item>
+        <item>13.778512, 100.573641</item>
     </string-array>
 
     <string-array name="BL19">
@@ -802,6 +855,7 @@
             \nExit 3: Soi Ratchadaphisek 5, The Embassy of the Republic of China, Esplanade Ratchadapisek
             \nExit 4: Thiam Ruam Mit Intersection, Big-C
         </item>
+        <item>13.765992, 100.570099</item>
     </string-array>
 
     <string-array name="BL20">
@@ -817,6 +871,7 @@
             \nExit 2: Soi Rama 9 Square, Central Plaza RAMA 9
             \nExit 3: Rama 9 Intersection
         </item>
+        <item>13.757791, 100.565372</item>
     </string-array>
 
     <string-array name="BL21">
@@ -832,6 +887,7 @@
             \nExit 2: Asoke Pier, Klong Saen Seap
             \nExit 3: Asoke - Din Deang Road, Kamphaeng Phet 7 Road
         </item>
+        <item>13.748695, 100.563122</item>
     </string-array>
 
     <string-array name="BL22">
@@ -847,6 +903,7 @@
             \nExit 2: Asoke Road, Interchange21
             \nExit 3: Terminal 21, Transit to BTS Sukhumvit Line - Asok Station
         </item>
+        <item>13.738494, 100.561419</item>
     </string-array>
 
     <string-array name="BL23">
@@ -863,6 +920,7 @@
             \nExit 3: Queen Sirikit National Convention Centre
             \nExit 4: Soi Phai Singto
         </item>
+        <item>13.723104, 100.560025</item>
     </string-array>
 
     <string-array name="BL24">
@@ -877,6 +935,7 @@
             \nExit 1: MEA Khlong Toei
             \nExit 2: Thailand Tobacco Monopoly, Soi Rong Ngan Yasup
         </item>
+        <item>13.722091, 100.554544</item>
     </string-array>
 
     <string-array name="BL25">
@@ -892,6 +951,7 @@
             \nExit 2: South Sathorn Road
             \nExit 3: Wireless Road, Suan Lum Night Bazaar
         </item>
+        <item>13.725867, 100.545382</item>
     </string-array>
 
     <string-array name="BL26">
@@ -906,6 +966,7 @@
             \nExit 1: Lumpini Park, Chulalongkorn Hospital
             \nExit 2: Silom Road, Dusit Thani, Transit to BTS Silom Line - Sala Deang Station
         </item>
+        <item>13.729269, 100.536495</item>
     </string-array>
 
     <string-array name="BL27">
@@ -921,6 +982,7 @@
             \nExit 2: Phaya Thai Road, Chulalongkorn University, Sam Yan Market
             \nExit 3: Chamchuri Square
         </item>
+        <item>13.732360, 100.529991</item>
     </string-array>
 
     <string-array name="BL28">
@@ -937,6 +999,7 @@
             \nExit 3: Rongmuang Street
             \nExit 4: Mahanakorn Junction
         </item>
+        <item>13.737910, 100.517194</item>
     </string-array>
 
     <!-- =======================================================================  -->
@@ -957,6 +1020,7 @@
             \nExit 3: Parking Building
             \nExit 4: Main Depot
         </item>
+        <item>13.892314, 100.408275</item>
     </string-array>
 
     <string-array name="PP2">
@@ -973,6 +1037,7 @@
             \nExit 3: Rattanathibet Village, Honda Showroom
             \nExit 4: CentralPlaza WestGate Bang Yai, Kasemrad Hospital
         </item>
+        <item>13.881143, 100.409343</item>
     </string-array>
 
     <string-array name="PP3">
@@ -989,6 +1054,7 @@
             \nExit 3: Soi Wat Maduea
             \nExit 4: Thanakan Village
         </item>
+        <item>13.874811, 100.419495</item>
     </string-array>
 
     <string-array name="PP4">
@@ -1005,6 +1071,7 @@
             \nExit 3: Ratchaphruek Village, Wat Suankaew
             \nExit 4: Wat Bang Phreak
         </item>
+        <item>13.875751, 100.433902</item>
     </string-array>
 
     <string-array name="PP5">
@@ -1021,6 +1088,7 @@
             \nExit 3: Soi Wat Bang Rak Yai
             \nExit 4: Bang Kruai - Sai Noi Road(South)/Bang Phlu Intersection
         </item>
+        <item>13.876648, 100.444566</item>
     </string-array>
 
     <string-array name="PP6">
@@ -1037,6 +1105,7 @@
             \nExit 3: Ratchaphruek Road (South), PTT Station
             \nExit 4: Ratchaphruek Road (North), ESSO Station
         </item>
+        <item>13.874896, 100.456085</item>
     </string-array>
 
     <string-array name="PP7">
@@ -1053,6 +1122,7 @@
             \nExit 3: Suetrong Housing Rattanathibet
             \nExit 4: Narathip Village
         </item>
+        <item>13.870546, 100.466660</item>
     </string-array>
 
     <string-array name="PP8">
@@ -1068,6 +1138,7 @@
             \nExit 2: Sanam Bin Nam Road/Soi Nonthaburi 13/1, Pranangklao Hospital
             \nExit 3: Pranangklao Pier
         </item>
+        <item>13.870384, 100.480460</item>
     </string-array>
 
     <string-array name="PP9">
@@ -1084,6 +1155,7 @@
             \nExit 3: Soi Rattanathibech 30, Bangkok Bank Rattanathibet Road Branch
             \nExit 4: Soi Rattanathibech 28, Central Rattanathibet, Index Living Mall, Park and Ride Building
         </item>
+        <item>13.866046, 100.494261</item>
     </string-array>
 
     <string-array name="PP10">
@@ -1100,6 +1172,7 @@
             \nExit 3: Soi Rattanathibet 24, Krung Thai Bank, Noble Thara Village
             \nExit 4: Soi Rattanathibet 20, Richmond Hotel
         </item>
+        <item>13.861746, 100.504815</item>
     </string-array>
 
     <string-array name="PP11">
@@ -1116,6 +1189,7 @@
             \nExit 3: Soi Rattanathibet 7
             \nExit 4: Soi Rattanathibet 10
         </item>
+        <item>13.860197, 100.513371</item>
     </string-array>
 
     <string-array name="PP12">
@@ -1132,6 +1206,7 @@
             \nExit 3: Soi Tiwanon 1/1
             \nExit 4: Regional Revenue Office 4
         </item>
+        <item>13.848735, 100.514838</item>
     </string-array>
 
     <string-array name="PP13">
@@ -1148,6 +1223,7 @@
             \nExit 3: Soi Krungtepnon 7
             \nExit 4: Soi Krungtepnon 11
         </item>
+        <item>13.839415, 100.515189</item>
     </string-array>
 
     <string-array name="PP14">
@@ -1164,6 +1240,7 @@
             \nExit 3: Soi Krungtepnon 7
             \nExit 4: Soi Krungtepnon 11
         </item>
+        <item>13.829926, 100.526544</item>
     </string-array>
 
     <string-array name="PP15">
@@ -1180,6 +1257,7 @@
             \nExit 3: Soi Krungthep-Nonthaburi 23/1
             \nExit 4: Soi Krungthep-Nonthaburi 25
         </item>
+        <item>13.820231, 100.532518</item>
     </string-array>
 
     <string-array name="PP16">
@@ -1198,6 +1276,7 @@
             \nExit 3: Soi Krung Thep-Nonthaburi 2, Tao Poon Market
             \nExit 4: Thanon Pracha Rat Sai 2
         </item>
+        <item>13.806202, 100.530816</item>
     </string-array>
 
 </resources>

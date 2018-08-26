@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ARLSchedules">
+        <item>Mon – Fri</item>
+        <item> </item>
+        <item>05:30 – 24:00</item>
+        <item>10 – 15 minutes</item>
+        <item>Sat – Sun</item>
+        <item> </item>
+        <item>05:30 – 24:00</item>
+        <item>12 – 15 minutes</item>
+    </string-array>
+
+    <string-array name="BTSSchedules">
+        <item>-------- Sukhumvit Line --------</item>
+        <item> </item>
+        <item>Mon – Fri</item>
+        <item> </item>
+        <item>06:00 – 07:00</item>
+        <item>5:00 minutes</item>
+        <item>07:00 – 09:30</item>
+        <item>2:30 – 3:00 minutes</item>
+        <item>09:30 – 15:30</item>
+        <item>5:30 – 6:00 minutes</item>
+        <item>15:30 – 20:00</item>
+        <item>2:40 – 4:00 minutes</item>
+        <item>20:00 – 21:00</item>
+        <item>5:00 minutes</item>
+        <item>21:00 – 22:00</item>
+        <item>6:00 minutes</item>
+        <item>22:00 – 24:00</item>
+        <item>8:00 minutes</item>
+
+        <item>Sat – Sun</item>
+        <item> </item>
+        <item>06:00 – 11:00</item>
+        <item>5:55 minutes</item>
+        <item>11:00 – 14:00</item>
+        <item>4:20 – 5:00 minutes</item>
+        <item>14:00 – 19:00</item>
+        <item>4:00 – 5:30 minutes</item>
+        <item>19:00 – 21:00</item>
+        <item>5:00 – 5:55 minutes</item>
+        <item>21:00 – 22:00</item>
+        <item>7:00 minutes</item>
+        <item>22:00 – 24:00</item>
+        <item>8:00 minutes</item>
+
+        <item> </item>
+        <item> </item>
+        <item>-------- Silom Line --------</item>
+        <item> </item>
+        <item>Mon – Fri</item>
+        <item> </item>
+        <item>06:00 – 07:00</item>
+        <item>6:00 minutes</item>
+        <item>07:00 – 09:00</item>
+        <item>4:50 minutes</item>
+        <item>9:00 – 17:00</item>
+        <item>6:00 minutes</item>
+        <item>17:00 – 20:00 </item>
+        <item>4:50 minutes</item>
+        <item>20:00 – 22:00</item>
+        <item>6:00 minutes</item>
+        <item>22:00 – 24:00</item>
+        <item>8:00 minutes</item>
+
+        <item>Sat – Sun</item>
+        <item> </item>
+        <item>06:00 – 22:00</item>
+        <item>6:00 minutes</item>
+        <item>22:00 – 24:00</item>
+        <item>8:00 minutes</item>
+    </string-array>
+
+    <string-array name="MRTSchedules">
+        <item>06:00 – 09:00</item>
+        <item>5 minutes</item>
+        <item>09:00 – 16:30</item>
+        <item>10 minutes</item>
+        <item>16:30 – 19:30</item>
+        <item>5 minutes</item>
+        <item>19:30 – 24:00 </item>
+        <item>10 minutes</item>
+
+    </string-array>
+</resources>

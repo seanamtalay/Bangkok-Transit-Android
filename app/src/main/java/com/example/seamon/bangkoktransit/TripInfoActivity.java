@@ -1,11 +1,16 @@
 package com.example.seamon.bangkoktransit;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.location.Address;
+import android.net.Uri;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +47,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
     private Double mDestinationStationLat;
     private Double mDestinationStationLng;
     private GoogleMap mGoogleMap;
+    private String mDestinationNameForMaps;
 
 
     public class CostAndTransit {
@@ -129,6 +135,9 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         TextView estimatedCostTextView = findViewById(R.id.estimated_cost_value);
         TextView numTransitsTextView = findViewById(R.id.num_transits_value);
         ImageView arrowStations = findViewById(R.id.arrow_stations);
+        ImageView firstStationInfoIcon = findViewById(R.id.station1_info_icon);
+        ImageView secondStationInfoIcon = findViewById(R.id.station2_info_icon);
+        FloatingActionButton fabDirectionTrip = (FloatingActionButton) findViewById(R.id.fab_direction_trip);
 
         arrowStations.setRotation(180);
 
@@ -138,8 +147,8 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         //update mDestinationStationLatLng according to the destination station name
         updateDestinationLatLng();
 
-        firstStationTextView.setText(mOriginStation);
-        secondStationTextView.setText(mDestinationStation);
+        firstStationTextView.setText(mOriginStation.replace("(", " \n("));
+        secondStationTextView.setText(mDestinationStation.replace("(", " \n("));
         Log.d(TAG, "onCreate: before if");
         if(googleServicesAvailable()){
             Log.d(TAG, "onCreate: in if");
@@ -151,8 +160,52 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         estimatedCostTextView.setText(Integer.toString(costAndTransit.getCost())+ " Baht");
         numTransitsTextView.setText(Integer.toString(costAndTransit.getNumTransit()));
 
+        //on click info icons
+        firstStationInfoIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TripInfoActivity.this, StationInfoActivity.class);
+                intent.putExtra("station_name", mOriginStation);
+                intent.putExtra("has_ori_des_buttons", false);
+                TripInfoActivity.this.startActivity(intent);
+            }
+        });
 
+        secondStationInfoIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TripInfoActivity.this, StationInfoActivity.class);
+                intent.putExtra("station_name", mDestinationStation);
+                intent.putExtra("has_ori_des_buttons", false);
+                TripInfoActivity.this.startActivity(intent);
+            }
+        });
+
+        //fab circle button
+        fabDirectionTrip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //cite: https://developers.google.com/maps/documentation/urls/android-intents
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+                //Uri gmmIntentUri = Uri.parse("geo:"+mStationLat+","+mStationLng+"?q=" + stationNameForMaps + " station");
+                Uri gmmIntentUri = Uri.parse("geo:0,0?q="+mDestinationStationLat+","+mDestinationStationLng+"("+mDestinationNameForMaps+ " station"+")");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+
+                mapIntent.setPackage("com.google.android.apps.maps");
+
+                startActivity(mapIntent);
+
+                // Display a label at the location of Google's Sydney office
+                ;
+
+
+                startActivity(mapIntent);
+            }
+        });
     }
+
 
     //get the names of picked stations from the intent. Then update the globals
     private void getIncomingIntent(){
@@ -185,11 +238,13 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         //get the station info based on the stationCode
         int resId = this.getResources().getIdentifier(stationCode,"array",this.getPackageName()); // might cause a bug (return 0)
         String[] stringArray = getResources().getStringArray(resId);
+        mDestinationNameForMaps = stringArray[0];
         String destinationLatLng = stringArray[4];
 
         String[] latLng =  destinationLatLng.split(", ");
         mDestinationStationLat = Double.parseDouble(latLng[0]);
         mDestinationStationLng = Double.parseDouble(latLng[1]);
+
     }
 
     //check for Play Services. It is required for GoogleMap API to work
@@ -481,7 +536,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         else
             originStationNumber = 0;
         if(!destinationLineCode.equals("CEN"))
-            destinationStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
+            destinationStationNumber = Integer.parseInt(destinationStationCode.replaceAll("\\D+", ""));
         else
             destinationStationNumber = 0;
 
@@ -508,6 +563,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         //get the shortest path from origin to destination as a list of String
         List<Node> shortestPathOriToDes = BTSNodesArray_CEN[0].getShortestPath();
 
+        Log.d(TAG, "getShortestDistant: destinationStationNumber: " + destinationStationNumber );
         if(destinationLineCode.equals("A"))
             shortestPathOriToDes = ARLNodesArray_Ax[destinationStationNumber].getShortestPath();
         else if(destinationLineCode.equals("N"))
@@ -682,18 +738,6 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         // get only line code eg. BL10 -> BL, N2 -> N
         String originLineCode = originStationCode.replaceAll("[^A-Za-z]+", "");
         String destinationLineCode = destinationStationCode.replaceAll("[^A-Za-z]+", "");
-
-        int originStationNumber;
-        int destinationStationNumber;
-        //get only number digits eg. BL10 -> 10, N2 -> 2 (for CEN, return 0)
-        if(!originLineCode.equals("CEN"))
-            originStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
-        else
-            originStationNumber = 0;
-        if(!destinationLineCode.equals("CEN"))
-            destinationStationNumber = Integer.parseInt(originStationCode.replaceAll("\\D+", ""));
-        else
-            destinationStationNumber = 0;
 
         //ARL
         if(originLineCode.equals("A")){
@@ -892,4 +936,11 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         return totalCost;
     }
 
+
+    @Override
+    public void finish() {
+        super.finish();
+        //exit transition animation
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

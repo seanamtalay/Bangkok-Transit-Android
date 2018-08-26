@@ -1,5 +1,6 @@
 package com.example.seamon.bangkoktransit;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -77,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            MainActivity.this.startActivity(intent);
             return true;
         }
 

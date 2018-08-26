@@ -1,5 +1,6 @@
 package com.example.seamon.bangkoktransit;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -18,10 +19,13 @@ public class RecylerViewAdapterStations extends RecyclerView.Adapter<RecylerView
 
     private ArrayList<String> mStationNames = new ArrayList<>();
     private Context mContext;
+    private Activity mActivity;
 
     public RecylerViewAdapterStations(Context context, ArrayList<String> mStationNames) {
         this.mStationNames = mStationNames;
         this.mContext = context;
+        this.mActivity = (Activity) context;
+
     }
 
     @NonNull
@@ -43,6 +47,12 @@ public class RecylerViewAdapterStations extends RecyclerView.Adapter<RecylerView
                 Intent intent = new Intent(mContext, StationInfoActivity.class);
                 intent.putExtra("station_name", mStationNames.get(position));
                 mContext.startActivity(intent);
+
+                //call finish function so that when user press back on the stationInfo Activity, it will skip select station activity and jump back to select line activity
+                mActivity.finish();
+
+                //transition animation
+                mActivity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
         });
 

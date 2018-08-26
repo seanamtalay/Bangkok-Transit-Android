@@ -68,4 +68,10 @@ public class PickStationActivity extends AppCompatActivity {
         recyclerView.setAdapter(recylerViewAdapterStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

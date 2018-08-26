@@ -1,5 +1,6 @@
 package com.example.seamon.bangkoktransit;
 
+import android.app.Activity;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,6 +18,7 @@ public class Tab1Fragment  extends Fragment{
     private static final String TAG = "Tab1Fragment";
     //vars
     private ArrayList<String> mTrainNames = new ArrayList<>();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

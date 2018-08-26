@@ -18,4 +18,20 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <!--Train Themed Button -->
+    <style name="AppTheme.ARLButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/ARLRed</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.BTSButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/SilomGreen</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppTheme.MRTButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/MRTBlue</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>
