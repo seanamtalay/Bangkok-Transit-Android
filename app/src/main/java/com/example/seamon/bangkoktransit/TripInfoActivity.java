@@ -412,16 +412,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
                 //terminal station1
                 BTSNodesArray_Wx[i].addDestination(BTSNodesArray_CEN[0], 1); //CEN
             }
-            /*
-            else if(BTSNodesArray_Wx[i].getName().equals("XX")){
-                //terminal station2
-                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i-1], 1);
-            }
-            else {
-                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i+1], 1);
-                BTSNodesArray_Wx[i].addDestination(BTSNodesArray_Wx[i-1], 1);
-            }
-            */
+
         }
 
         //BTS S

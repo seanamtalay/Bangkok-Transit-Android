@@ -10,12 +10,11 @@
         <item>City Line</item>
         <item>Platform 1: To Phaya Thai Station
             \nPlatform 2: To Phaya Thai Station
-            \n
         </item>
         <item>
             Number of exits: 2
             \nExit 1: Suvarnabhumi Airport
-            \nExit 2: Novotel Bangkok Suvarnabhumi Airport\n
+            \nExit 2: Novotel Bangkok Suvarnabhumi Airport
         </item>
         <item>13.698134, 100.752359</item>
     </string-array>
@@ -25,9 +24,9 @@
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
-            \nPlatform 2: To Phaya Thai Station\n
+            \nPlatform 2: To Phaya Thai Station
         </item>
-        <item>Number of exits: 2\n</item>
+        <item>Number of exits: 2</item>
         <item>13.727918, 100.749087</item>
     </string-array>
 
@@ -36,10 +35,10 @@
         <item>City Line</item>
         <item>
             Platform 1: To Suvarnabhumi Station
-            \nPlatform 2: To Phaya Thai Station\n
+            \nPlatform 2: To Phaya Thai Station
         </item>
         <item>
-            Number of exits: 2\n
+            Number of exits: 2
         </item>
         <item>13.733143, 100.688732</item>
     </string-array>

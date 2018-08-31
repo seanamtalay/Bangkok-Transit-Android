@@ -101,8 +101,8 @@ public class PickSecondStationActivity extends AppCompatActivity {
     private void initRecyclerView(String first_station_name){
 
         RecyclerView recyclerView = findViewById(R.id.SecondStationRecyclerView);
-        RecylerViewAdapterSecondStations recylerViewAdapterSecondStations = new RecylerViewAdapterSecondStations(this, mStationNames, first_station_name, mSelectedAs);
-        recyclerView.setAdapter(recylerViewAdapterSecondStations);
+        RecyclerViewAdapterSecondStations recyclerViewAdapterSecondStations = new RecyclerViewAdapterSecondStations(this, mStationNames, first_station_name, mSelectedAs);
+        recyclerView.setAdapter(recyclerViewAdapterSecondStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 

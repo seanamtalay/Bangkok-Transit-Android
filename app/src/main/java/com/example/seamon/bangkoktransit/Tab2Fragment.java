@@ -43,7 +43,6 @@ public class Tab2Fragment extends Fragment {
         View rootView = inflater.inflate(R.layout.tab2fragment, container, false);
 
         getNearByStations(rootView);
-
         return rootView;
     }
     
@@ -153,18 +152,6 @@ public class Tab2Fragment extends Fragment {
         }
     }
 
-    /*
-    private void initTrainNames(View view){
-        //Add train types to the list only when it is empty
-        if(mNearByStations.size() == 0) {
-            // convert array to arrayList
-            mNearByStations = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.train_names_array)));
-        }
-
-        initRecyclerView(view);
-    }
-    */
-
     private void initRecyclerView(View view){
         Log.d(TAG, "initRecyclerView: initing");
         RecyclerView recyclerView = view.findViewById(R.id.Tab2RecyclerView);
@@ -173,5 +160,25 @@ public class Tab2Fragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
+    @Override
+    public void onPause() {
+        Log.d(TAG, "onPause: is called");
+        super.onPause();
+        mLocationManager.removeUpdates(mLocationListener);
+    }
 
+    @Override
+    public void onStop() {
+        Log.d(TAG, "onStop: is called");
+        super.onStop();
+        mLocationManager.removeUpdates(mLocationListener);
+    }
+
+    @Override
+    public void onResume() {
+        Log.d(TAG, "onResume: is called");
+        super.onResume();
+        View rootView = getView();
+        getNearByStations(rootView);
+    }
 }

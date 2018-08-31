@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,8 +63,8 @@ public class PickStationActivity extends AppCompatActivity {
     private void initRecyclerView(){
 
         RecyclerView recyclerView = findViewById(R.id.StationRecyclerView);
-        RecylerViewAdapterStations recylerViewAdapterStations = new RecylerViewAdapterStations(this, mStationNames);
-        recyclerView.setAdapter(recylerViewAdapterStations);
+        RecyclerViewAdapterStations recyclerViewAdapterStations = new RecyclerViewAdapterStations(this, mStationNames);
+        recyclerView.setAdapter(recyclerViewAdapterStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
