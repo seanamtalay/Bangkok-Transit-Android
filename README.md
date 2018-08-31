@@ -1,12 +1,14 @@
 # Bangkok Transit
 
 <img src="readme_resources/headline.jpg"/>
-
-      The goal of this app is to create a clean & easy to use material-designed transit app for Bangkok's metro system, that also has all the necessary features, to help out the tourists that came to visit Bangkok, Thailand.
-
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" 
       alt="Download from Google Play" 
       height="80">](https://play.google.com/store/apps/details?id=com.bangkoktransit.seamon.bangkoktransit&rdid=com.bangkoktransit.seamon.bangkoktransit)
+      
+
+The goal of this app is to create a clean & easy to use material-designed transit app for Bangkok's metro system, that also has all the necessary features, to help out the tourists that came to visit Bangkok, Thailand.
+
+
 
 # Features
 
