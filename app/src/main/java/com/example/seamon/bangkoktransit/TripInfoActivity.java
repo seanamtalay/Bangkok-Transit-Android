@@ -186,9 +186,6 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
             @Override
             public void onClick(View view) {
                 //cite: https://developers.google.com/maps/documentation/urls/android-intents
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-
                 //Uri gmmIntentUri = Uri.parse("geo:"+mStationLat+","+mStationLng+"?q=" + stationNameForMaps + " station");
                 Uri gmmIntentUri = Uri.parse("geo:0,0?q="+mDestinationStationLat+","+mDestinationStationLng+"("+mDestinationNameForMaps+ " station"+")");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
@@ -201,7 +198,6 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
                 ;
 
 
-                startActivity(mapIntent);
             }
         });
     }
