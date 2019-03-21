@@ -83,14 +83,13 @@ public class StationInfoActivity extends AppCompatActivity {
 
                 startActivity(mapIntent);
 
-                startActivity(mapIntent);
             }
         });
 
         //check if the buttons are needed or not
         if(!has_ori_des_buttons){
-            setOriginButton.setVisibility(View.INVISIBLE);
-            setDestinationButton.setVisibility(View.INVISIBLE);
+            setOriginButton.setVisibility(View.GONE);
+            setDestinationButton.setVisibility(View.GONE);
         }
 
         //As Origin button

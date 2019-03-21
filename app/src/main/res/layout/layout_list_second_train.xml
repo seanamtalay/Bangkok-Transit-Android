@@ -6,20 +6,20 @@ android:layout_width="match_parent"
 android:layout_height="wrap_content"
 android:id="@+id/parent_layout_second_train">
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="56dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginStart="0dp"
-    android:text="item text"
-    android:textSize="14sp"
-    android:id="@+id/second_train_name"
-    android:gravity="center_vertical"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:layout_toRightOf="@+id/second_train_logo"/>
+    <TextView
+        android:id="@+id/second_train_name"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@+id/second_train_logo"
+        android:gravity="center_vertical"
+        android:text="item text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/second_train_logo"

@@ -59,6 +59,7 @@ public class Tab3Fragment extends Fragment {
         BTSTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 View viewPopup = LayoutInflater.from(getActivity()).inflate(R.layout.layout_time_schedules_info_popup, null);
 
                 initTable(viewPopup, "BTSSchedules");
