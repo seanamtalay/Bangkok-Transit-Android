@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.util.ArrayUtils;
@@ -50,6 +51,7 @@ public class Tab2Fragment extends Fragment {
         Log.d(TAG, "getNearByStations: starts");
         mLocationManager = (LocationManager) getActivity().getSystemService(LOCATION_SERVICE);
         final TextView noNearbyText = view.findViewById(R.id.noNearbyText);
+        final ImageView noNearbyImage = view.findViewById(R.id.noNearbyImage);
 
         mLocationListener = new LocationListener() {
             @Override
@@ -96,9 +98,11 @@ public class Tab2Fragment extends Fragment {
                 //set the text to be invisible if there are nearby stations
                 if(mNearByStations.size() != 0){
                     noNearbyText.setVisibility(View.INVISIBLE);
+                    noNearbyImage.setVisibility(View.INVISIBLE);
                 }
                 else{
                     noNearbyText.setVisibility(View.VISIBLE);
+                    noNearbyImage.setVisibility(View.VISIBLE);
                 }
 
                 initRecyclerView(view);
