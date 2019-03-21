@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -73,12 +74,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView trainName;
-        TextView trainLogo;
+        ImageView trainLogo;
         RelativeLayout parentLayout;
         public ViewHolder(View itemView) {
             super(itemView);
             trainName = itemView.findViewById(R.id.train_name);
-            trainLogo = itemView.findViewById(R.id.train_logo);
+            trainLogo = itemView.findViewById(R.id.all_station_line_image);
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
     }
@@ -87,29 +88,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     //change trainLogo according to line name.
     private void changeLogo(@NonNull ViewHolder holder, String line){
         if(line.equals(holder.itemView.getContext().getResources().getString(R.string.ARL))){
-            holder.trainLogo.setText("  ARL  ");
-            holder.trainLogo.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.ARLRed));
-            holder.trainLogo.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+            holder.trainLogo.setImageResource(R.drawable.arl_logo);
         }
         else if(line.equals(holder.itemView.getContext().getResources().getString(R.string.BTS_Sukhumvit))){
-            holder.trainLogo.setText("  BTS  ");
-            holder.trainLogo.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.SukhumvitGreen));
-            holder.trainLogo.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.black));
+            holder.trainLogo.setImageResource(R.drawable.bts_sukhumvit_logo);
         }
         else if(line.equals(holder.itemView.getContext().getResources().getString(R.string.BTS_Silom))){
-            holder.trainLogo.setText("  BTS  ");
-            holder.trainLogo.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.SilomGreen));
-            holder.trainLogo.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+            holder.trainLogo.setImageResource(R.drawable.bts_silom_logo);
         }
         else if(line.equals(holder.itemView.getContext().getResources().getString(R.string.MRT_blue))){
-            holder.trainLogo.setText("  MRT  ");
-            holder.trainLogo.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.MRTBlue));
-            holder.trainLogo.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+            holder.trainLogo.setImageResource(R.drawable.mrt_blue_logo);
         }
         else if(line.equals(holder.itemView.getContext().getResources().getString(R.string.MRT_purple))){
-            holder.trainLogo.setText("  MRT  ");
-            holder.trainLogo.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.MRTPurple));
-            holder.trainLogo.setTextColor(holder.itemView.getContext().getResources().getColor(R.color.white));
+            holder.trainLogo.setImageResource(R.drawable.mrt_purple_logo);
         }
 
     }

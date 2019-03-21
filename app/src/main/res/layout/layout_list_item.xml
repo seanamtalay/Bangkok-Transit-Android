@@ -2,37 +2,39 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/parent_layout">
 
-    <TextView
-        android:id="@+id/train_name"
-        android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_toRightOf="@+id/train_logo"
-        android:gravity="center_vertical"
-        android:text="item text"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/train_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:gravity="center_vertical"
-        android:text="Logo"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/all_station_line_image"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arl_logo" />
+
+        <TextView
+            android:id="@+id/train_name"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="item text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/all_station_line_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </RelativeLayout>

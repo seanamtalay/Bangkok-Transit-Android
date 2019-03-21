@@ -171,7 +171,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/google_maps_64px" />
+        app:srcCompat="@drawable/googleg_standard_color_18" />
 
 
 </android.support.constraint.ConstraintLayout>

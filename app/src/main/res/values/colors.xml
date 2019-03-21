@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#4480ed</color>
     <color name="colorPrimaryDark">#0054ba</color>
-    <color name="colorPrimaryLight">#81afff</color>
+    <color name="colorPrimaryLight">#81AFFF</color>
     <color name="colorAccent">#0054ba</color>
     <color name="ARLRed">#6c1d21</color>
     <color name="SilomGreen">#246252</color>

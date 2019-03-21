@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,12 +20,18 @@ public class PickSecondStationActivity extends AppCompatActivity {
     private ArrayList<String> mStationNames = new ArrayList<>();
     private String mFirstStation;
     private String mSelectedAs;
+    private TextView trainNameHeader;
+    private ImageView trainLogoHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pick_second_station);
+        //setContentView(R.layout.activity_pick_second_station);
+        setContentView(R.layout.activity_pick_station);
         Log.d(TAG, "onCreate: started.");
+
+        trainLogoHeader = findViewById(R.id.pick_station_line_head_image);
+        trainNameHeader = findViewById(R.id.pick_station_line_head_text);
 
         getIncomingIntent();
 
@@ -81,18 +89,28 @@ public class PickSecondStationActivity extends AppCompatActivity {
         //match station array with the extra from previous activity's intent
         if(trainName.equals(getResources().getString(R.string.ARL))){
             mStationNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.stations_ARL_array)));
+            trainNameHeader.setText(trainName);
+            trainLogoHeader.setImageResource(R.drawable.arl_logo);
         }
         else if(trainName.equals(getResources().getString(R.string.BTS_Sukhumvit))){
             mStationNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.stations_BTS_Sukhumvit_array)));
+            trainNameHeader.setText(trainName);
+            trainLogoHeader.setImageResource(R.drawable.bts_sukhumvit_logo);
         }
         else if(trainName.equals(getResources().getString(R.string.BTS_Silom))){
             mStationNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.stations_BTS_Silom_array)));
+            trainNameHeader.setText(trainName);
+            trainLogoHeader.setImageResource(R.drawable.bts_silom_logo);
         }
         else if(trainName.equals(getResources().getString(R.string.MRT_blue))){
             mStationNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.stations_MRT_Blue_array)));
+            trainNameHeader.setText(trainName);
+            trainLogoHeader.setImageResource(R.drawable.mrt_blue_logo);
         }
         else if(trainName.equals(getResources().getString(R.string.MRT_purple))){
             mStationNames = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.stations_MRT_Purple_array)));
+            trainNameHeader.setText(trainName);
+            trainLogoHeader.setImageResource(R.drawable.mrt_purple_logo);
         }
     }
 
@@ -100,7 +118,7 @@ public class PickSecondStationActivity extends AppCompatActivity {
 
     private void initRecyclerView(String first_station_name){
 
-        RecyclerView recyclerView = findViewById(R.id.SecondStationRecyclerView);
+        RecyclerView recyclerView = findViewById(R.id.StationRecyclerView);
         RecyclerViewAdapterSecondStations recyclerViewAdapterSecondStations = new RecyclerViewAdapterSecondStations(this, mStationNames, first_station_name, mSelectedAs);
         recyclerView.setAdapter(recyclerViewAdapterSecondStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

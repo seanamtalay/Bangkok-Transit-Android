@@ -179,10 +179,28 @@ public class Tab2Fragment extends Fragment {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mLocationManager.removeUpdates(mLocationListener);
+    }
+
+    @Override
     public void onResume() {
         Log.d(TAG, "onResume: is called");
         super.onResume();
         View rootView = getView();
         getNearByStations(rootView);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mLocationManager.removeUpdates(mLocationListener);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        mLocationManager.removeUpdates(mLocationListener);
     }
 }

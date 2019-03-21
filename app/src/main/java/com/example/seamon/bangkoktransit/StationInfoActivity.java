@@ -1,5 +1,6 @@
 package com.example.seamon.bangkoktransit;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,14 +17,25 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class StationInfoActivity extends AppCompatActivity {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class StationInfoActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final String TAG = "StationInfoActivity";
     private String current_station;
     private Boolean has_ori_des_buttons = true;
     private Double mStationLat;
     private Double mStationLng;
     private String mStationNameForMaps;
+    private GoogleMap mGoogleMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +127,13 @@ public class StationInfoActivity extends AppCompatActivity {
         });
 
 
+        //Maps
+        if(googleServicesAvailable()){
+            Log.d(TAG, "onCreate: in if");
+            initMap();
+        }
+
+
     }
 
     private void changeLogo(String line){
@@ -204,6 +223,51 @@ public class StationInfoActivity extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    //check for Play Services. It is required for GoogleMap API to work
+    public boolean googleServicesAvailable(){
+        GoogleApiAvailability api = GoogleApiAvailability.getInstance();
+        int isAvailable = api.isGooglePlayServicesAvailable(this);
+        if(isAvailable == ConnectionResult.SUCCESS){
+            return true;
+        }
+        else if(api.isUserResolvableError(isAvailable)){
+            Dialog dialog = api.getErrorDialog(this, isAvailable, 0);
+            dialog.show();
+        }
+        else{
+            Toast.makeText(this, "Can't connect to Play Services", Toast.LENGTH_LONG).show();
+        }
+        return false;
+    }
+
+    //initialize the GoogleMap fragment
+    private void initMap(){
+        MapFragment mapFragment = (MapFragment)getFragmentManager().findFragmentById(R.id.mapFragmentStationInfo);
+        mapFragment.getMapAsync(this);
+    }
+
+    // Manipulating maps after it is built
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mGoogleMap = googleMap;
+
+        LatLng sydney = new LatLng(-33.852, 151.211);
+        LatLng stationLatLng = new LatLng(mStationLat, mStationLng);
+
+        googleMap.addMarker(new MarkerOptions().position(stationLatLng)
+                .title(mStationNameForMaps));
+        float zoomLevel = 17.5f;
+
+        //adjusting camera to the center
+        double cameraLat = mStationLat /*- 0.0006*/;
+        LatLng cameraLatLng = new LatLng(cameraLat, mStationLng);
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraLatLng, zoomLevel));
+        //googleMap.getUiSettings().setZoomGesturesEnabled(false);
+        googleMap.getUiSettings().setScrollGesturesEnabled(false);
+
+
     }
 
 
