@@ -1,14 +1,10 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.BackgroundColorSpan;
-import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +13,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.seamon.bangkoktransit.Activity.PickStationActivity;
+import com.example.seamon.bangkoktransit.R;
 
 import java.util.ArrayList;
 

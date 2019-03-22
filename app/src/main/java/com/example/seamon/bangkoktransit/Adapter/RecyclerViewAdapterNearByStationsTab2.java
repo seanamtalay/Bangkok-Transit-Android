@@ -1,4 +1,4 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.seamon.bangkoktransit.Activity.StationInfoActivity;
+import com.example.seamon.bangkoktransit.R;
 
 import java.util.ArrayList;
 

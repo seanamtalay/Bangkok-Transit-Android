@@ -1,4 +1,4 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Fragment;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -10,12 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.example.seamon.bangkoktransit.Activity.ZoomTransitMapActivity;
+import com.example.seamon.bangkoktransit.R;
 
 public class Tab3Fragment extends Fragment {
 

@@ -22,7 +22,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
@@ -33,22 +33,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PickStationActivity"
+        <activity android:name=".Activity.PickStationActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PickSecondStationActivity"
+        <activity android:name=".Activity.PickSecondStationActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".StationInfoActivity"
+            android:name=".Activity.StationInfoActivity"
             android:label="@string/title_activity_station_info"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
-        <activity android:name=".PickSecondTrainActivity"
+        <activity android:name=".Activity.PickSecondTrainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TripInfoActivity"
+        <activity android:name=".Activity.TripInfoActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
 
@@ -73,12 +73,12 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".Activity.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".ZoomTransitMapActivity"
+        <activity android:name=".Activity.ZoomTransitMapActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"/>
-        <activity android:name=".AboutActivity"
+        <activity android:name=".Activity.AboutActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"></activity>
     </application>

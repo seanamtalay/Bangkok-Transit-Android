@@ -1,4 +1,4 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Fragment;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -20,11 +20,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.common.util.ArrayUtils;
+import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterNearByStationsTab2;
+import com.example.seamon.bangkoktransit.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 
 import static android.content.Context.LOCATION_SERVICE;

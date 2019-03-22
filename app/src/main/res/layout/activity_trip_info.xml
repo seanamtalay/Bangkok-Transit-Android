@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TripInfoActivity">
+    tools:context=".Activity.TripInfoActivity">
 
     <TextView
         android:id="@+id/first_station_textview"
@@ -141,7 +141,7 @@
     <fragment
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".TripInfoActivity"
+        tools:context=".Activity.TripInfoActivity"
         android:id="@+id/mapFragmentTripInfo"
         android:name="com.google.android.gms.maps.MapFragment"
 

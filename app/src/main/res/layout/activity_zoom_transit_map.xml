@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ZoomTransitMapActivity">
+    tools:context=".Activity.ZoomTransitMapActivity">
 
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/photo_view_transit_map"

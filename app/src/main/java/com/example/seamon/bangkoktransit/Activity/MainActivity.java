@@ -1,10 +1,7 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Activity;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -13,13 +10,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
+import com.example.seamon.bangkoktransit.R;
+import com.example.seamon.bangkoktransit.Fragment.Tab1Fragment;
+import com.example.seamon.bangkoktransit.Fragment.Tab2Fragment;
+import com.example.seamon.bangkoktransit.Fragment.Tab3Fragment;
 
 public class MainActivity extends AppCompatActivity {
 

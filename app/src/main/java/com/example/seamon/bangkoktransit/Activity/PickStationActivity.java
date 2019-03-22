@@ -1,32 +1,31 @@
-package com.example.seamon.bangkoktransit;
+package com.example.seamon.bangkoktransit.Activity;
 
-import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.seamon.bangkoktransit.R;
+import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterStations;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class PickSecondStationActivity extends AppCompatActivity {
+public class PickStationActivity extends AppCompatActivity {
 
-    private static final String TAG = "PickSecondStationAct";
+    private static final String TAG = "PickStationActivity";
 
     //vars
     private ArrayList<String> mStationNames = new ArrayList<>();
-    private String mFirstStation;
-    private String mSelectedAs;
     private TextView trainNameHeader;
     private ImageView trainLogoHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_pick_second_station);
         setContentView(R.layout.activity_pick_station);
         Log.d(TAG, "onCreate: started.");
 
@@ -34,52 +33,17 @@ public class PickSecondStationActivity extends AppCompatActivity {
         trainNameHeader = findViewById(R.id.pick_station_line_head_text);
 
         getIncomingIntent();
-
-        //Snack bar asking user to pick the second station
-        String originOrDestinationText = "";
-        if(mSelectedAs.equals("origin")){
-            originOrDestinationText = getResources().getString(R.string.select_destination_station);
-        }
-        else if(mSelectedAs.equals("destination")){
-            originOrDestinationText = getResources().getString(R.string.select_origin_station);
-        }
-        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
-        selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        selectStationSnackbar.show();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //Snack bar asking user to pick the second station
-        String originOrDestinationText = "";
-        if(mSelectedAs.equals("origin")){
-            originOrDestinationText = getResources().getString(R.string.select_destination_station);
-        }
-        else if(mSelectedAs.equals("destination")){
-            originOrDestinationText = getResources().getString(R.string.select_origin_station);
-        }
-        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
-        selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        selectStationSnackbar.show();
     }
 
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
-        if(getIntent().hasExtra("second_station_name") && getIntent().hasExtra("first_station_name") && getIntent().hasExtra("selected_as")){
-            String trainName = getIntent().getStringExtra("second_station_name");
-            Log.d(TAG, "getIncomingIntent: Found intent extras: " + trainName);
+        if(getIntent().hasExtra("train_name")){
+            Log.d(TAG, "getIncomingIntent: Found intent extras.");
+
+            String trainName = getIntent().getStringExtra("train_name");
             setStations(trainName);
-
-            mFirstStation = getIntent().getStringExtra("first_station_name");
-            Log.d(TAG, "getIncomingIntent: Found intent extras: " + mFirstStation);
-
-            mSelectedAs = getIntent().getStringExtra("selected_as");
-
+            initRecyclerView();
         }
-
-
-        initRecyclerView(mFirstStation);
     }
 
     private void setStations(String trainName){
@@ -116,18 +80,17 @@ public class PickSecondStationActivity extends AppCompatActivity {
 
 
 
-    private void initRecyclerView(String first_station_name){
+    private void initRecyclerView(){
 
         RecyclerView recyclerView = findViewById(R.id.StationRecyclerView);
-        RecyclerViewAdapterSecondStations recyclerViewAdapterSecondStations = new RecyclerViewAdapterSecondStations(this, mStationNames, first_station_name, mSelectedAs);
-        recyclerView.setAdapter(recyclerViewAdapterSecondStations);
+        RecyclerViewAdapterStations recyclerViewAdapterStations = new RecyclerViewAdapterStations(this, mStationNames);
+        recyclerView.setAdapter(recyclerViewAdapterStations);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
     public void finish() {
         super.finish();
-        //exit transition animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }
