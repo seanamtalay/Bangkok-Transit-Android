@@ -2,6 +2,7 @@ package com.example.seamon.bangkoktransit.Fragment;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -42,6 +43,8 @@ public class Tab3Fragment extends Fragment {
     private ArrayList<String> mNearByStations = new ArrayList<>();
     private LocationManager mLocationManager;
     private LocationListener mLocationListener;
+    private String[] mAllStationsArray;
+    private Context mContext;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -51,6 +54,10 @@ public class Tab3Fragment extends Fragment {
         Button ARLTimeButton = rootView.findViewById(R.id.ARL_time_button);
         Button BTSTimeButton = rootView.findViewById(R.id.BTS_time_button);
         Button MRTTimeButton = rootView.findViewById(R.id.MRT_time_button);
+
+        mAllStationsArray = getResources().getStringArray(R.array.all_stations_name_array);
+        mContext = getContext();
+
 
         transitMap.setOnClickListener(new View.OnClickListener(){
 
@@ -193,7 +200,7 @@ public class Tab3Fragment extends Fragment {
             public void onLocationChanged(Location location) {
                 //clear the arrayList first
                 mNearByStations.clear();
-                Log.d(TAG, "onLocationChanged: location: " + location.toString());
+                //Log.d(TAG, "onLocationChanged: location: " + location.toString());
                 //compare nearby locations with current lat long
                 Double currentLat = location.getLatitude();
                 Double currentLng = location.getLongitude();
@@ -205,8 +212,6 @@ public class Tab3Fragment extends Fragment {
                 Double compareLat;
                 Double compareLng;
 
-                String[] mAllStationsArray = getResources().getStringArray(R.array.all_stations_name_array);
-
                 //for all the lat lng{
                 for(String current_station : mAllStationsArray) {
                     //extract station code from current_station name
@@ -214,8 +219,8 @@ public class Tab3Fragment extends Fragment {
                     String stationCode = splitedName[0];
 
                     //get the station info based on the stationCode
-                    int resId = getContext().getResources().getIdentifier(stationCode,"array",getContext().getPackageName()); // might cause a bug (return 0)
-                    eachStation = getResources().getStringArray(resId);
+                    int resId = mContext.getResources().getIdentifier(stationCode,"array",mContext.getPackageName()); // might cause a bug (return 0)
+                    eachStation = mContext.getResources().getStringArray(resId);
                     eachStationLatLng = eachStation[4];
                     eachLatLng =  eachStationLatLng.split(", ");
                     compareLat = Double.parseDouble(eachLatLng[0]);
@@ -223,7 +228,7 @@ public class Tab3Fragment extends Fragment {
 
                     if (compareLat <= currentLat + 0.01 && compareLat >= currentLat - 0.01) {
                         if (compareLng <= currentLng + 0.01 && compareLng >= currentLng - 0.01) {
-                            Log.d(TAG, "onLocationChanged: detected station nearby! :"+eachStation[0]);
+                            //Log.d(TAG, "onLocationChanged: detected station nearby! :"+eachStation[0]);
                             //add that station to the mNearByStations arrayList
                             mNearByStations.add(current_station); // full name with code format
                         }
@@ -264,7 +269,7 @@ public class Tab3Fragment extends Fragment {
         };
         if(Build.VERSION.SDK_INT > 23) {
 
-            if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 // TODO: Consider calling
                 //    ActivityCompat#requestPermissions
                 // here to request the missing permissions, and then overriding
@@ -288,7 +293,7 @@ public class Tab3Fragment extends Fragment {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-            if(ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION)
+            if(ContextCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION)
                     == PackageManager.PERMISSION_GRANTED){
                 mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, mLocationListener);
             }

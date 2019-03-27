@@ -57,7 +57,7 @@ public class Tab2Fragment extends Fragment {
             public void onLocationChanged(Location location) {
                 //clear the arrayList first
                 mNearByStations.clear();
-                Log.d(TAG, "onLocationChanged: location: " + location.toString());
+                //Log.d(TAG, "onLocationChanged: location: " + location.toString());
                 //compare nearby locations with current lat long
                 Double currentLat = location.getLatitude();
                 Double currentLng = location.getLongitude();
@@ -87,7 +87,7 @@ public class Tab2Fragment extends Fragment {
 
                     if (compareLat <= currentLat + 0.01 && compareLat >= currentLat - 0.01) {
                         if (compareLng <= currentLng + 0.01 && compareLng >= currentLng - 0.01) {
-                            Log.d(TAG, "onLocationChanged: detected station nearby! :"+eachStation[0]);
+                            //Log.d(TAG, "onLocationChanged: detected station nearby! :"+eachStation[0]);
                             //add that station to the mNearByStations arrayList
                             mNearByStations.add(current_station); // full name with code format
                         }
@@ -156,7 +156,7 @@ public class Tab2Fragment extends Fragment {
     }
 
     private void initRecyclerView(View view){
-        Log.d(TAG, "initRecyclerView: initing");
+        //Log.d(TAG, "initRecyclerView: initing");
         RecyclerView recyclerView = view.findViewById(R.id.Tab2RecyclerView);
         RecyclerViewAdapterNearByStationsTab2 adapter = new RecyclerViewAdapterNearByStationsTab2(getActivity(), mNearByStations);
         recyclerView.setAdapter(adapter);

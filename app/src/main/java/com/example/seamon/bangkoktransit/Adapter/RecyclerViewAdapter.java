@@ -43,7 +43,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Log.d(TAG, "onBindViewHolder: called.");
+        //Log.d(TAG, "onBindViewHolder: called.");
         holder.trainName.setText(mTrainNames.get(position));
 
         changeLogo(holder,mTrainNames.get(position));

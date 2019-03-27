@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,6 +31,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import static com.example.seamon.bangkoktransit.Utils.UtilsKt.getStationLat;
+import static com.example.seamon.bangkoktransit.Utils.UtilsKt.getStationLng;
 
 public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final String TAG = "TripInfoActivity";
@@ -131,6 +135,9 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         ImageView secondStationInfoIcon = findViewById(R.id.station2_info_icon);
         FloatingActionButton fabDirectionTrip = (FloatingActionButton) findViewById(R.id.fab_direction_trip);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         arrowStations.setRotation(180);
 
         //get the names from the intent and change the textViews accordingly
@@ -177,7 +184,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         fabDirectionTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //cite: https://developers.google.com/maps/documentation/urls/android-intents
+                /*//cite: https://developers.google.com/maps/documentation/urls/android-intents
                 //Uri gmmIntentUri = Uri.parse("geo:"+mStationLat+","+mStationLng+"?q=" + stationNameForMaps + " station");
                 Uri gmmIntentUri = Uri.parse("geo:0,0?q="+mDestinationStationLat+","+mDestinationStationLng+"("+mDestinationNameForMaps+ " station"+")");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
@@ -187,7 +194,13 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
                 startActivity(mapIntent);
 
                 // Display a label at the location of Google's Sydney office
-                ;
+                ;*/
+
+                String uri = "http://maps.google.com/maps?f=d&hl=en&saddr=" + getStationLat(getBaseContext(), mOriginStation) + "," + getStationLng(getBaseContext(), mOriginStation)
+                        + "&daddr=" + getStationLat(getBaseContext(), mDestinationStation) + "," + getStationLng(getBaseContext(), mDestinationStation);
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
 
 
             }
@@ -921,5 +934,16 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
         super.finish();
         //exit transition animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

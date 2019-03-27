@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +32,9 @@ public class PickSecondStationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_pick_second_station);
         setContentView(R.layout.activity_pick_station);
-        Log.d(TAG, "onCreate: started.");
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         trainLogoHeader = findViewById(R.id.pick_station_line_head_image);
         trainNameHeader = findViewById(R.id.pick_station_line_head_text);
@@ -132,5 +135,16 @@ public class PickSecondStationActivity extends AppCompatActivity {
         super.finish();
         //exit transition animation
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

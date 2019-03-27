@@ -101,13 +101,13 @@ public class MainActivity extends AppCompatActivity {
             //Returning the current tabs
             switch (position){
                 case 0:
-                    Tab1Fragment tab1 = new Tab1Fragment();
+                    Tab3Fragment tab1 = new Tab3Fragment();
                     return tab1;
-                case 1:
+                /*case 1:
                     Tab2Fragment tab2 = new Tab2Fragment();
-                    return tab2;
-                case 2:
-                    Tab3Fragment tab3 = new Tab3Fragment();
+                    return tab2;*/
+                case 1:
+                    Tab1Fragment tab3 = new Tab1Fragment();
                     return tab3;
                 default:
                     return null;
@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
     }

@@ -57,9 +57,6 @@ public class EtaStationRecyclerAdapter extends RecyclerView.Adapter<EtaStationRe
                 intent.putExtra("station_name", mStationNames.get(position));
                 mContext.startActivity(intent);
 
-                //call finish function so that when user press back on the stationInfo Activity, it will skip select station activity and jump back to select line activity
-                mActivity.finish();
-
                 //transition animation
                 mActivity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
             }
@@ -101,7 +98,7 @@ public class EtaStationRecyclerAdapter extends RecyclerView.Adapter<EtaStationRe
         public ViewHolder(View itemView) {
             super(itemView);
             trainLogo = itemView.findViewById(R.id.nearby_eta_line_image);
-            stationName = itemView.findViewById(R.id.nearby_station_name);
+            stationName = itemView.findViewById(R.id.nearby_eta_station_name_text);
             layout = itemView.findViewById(R.id.nearby_eta_layout);
             etaTimeText = itemView.findViewById(R.id.nearby_eta_time_text);
         }

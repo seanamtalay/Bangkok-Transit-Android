@@ -12,6 +12,7 @@ import android.text.Spanned;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -47,6 +48,10 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
         TextView stationInfoExit = findViewById(R.id.station_info_exit);
         Button setOriginButton = findViewById(R.id.set_origin_button);
         Button setDestinationButton = findViewById(R.id.set_destination_button);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         current_station = getIncomingIntent();
 
@@ -267,6 +272,17 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
         googleMap.getUiSettings().setScrollGesturesEnabled(false);
 
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 
 import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterSecondTrain;
 import com.example.seamon.bangkoktransit.R;
@@ -26,6 +27,10 @@ public class PickSecondTrainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_second_train);
         getIncomingIntent();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         //Snack bar asking user to pick the second station
         String originOrDestinationText = "";
         if(mSelectedAs.equals("origin")){
@@ -82,6 +87,17 @@ public class PickSecondTrainActivity extends AppCompatActivity {
         RecyclerViewAdapterSecondTrain recyclerViewAdapterSecondTrain = new RecyclerViewAdapterSecondTrain(this, mTrainNames, mFirstStation, mSelectedAs);
         recyclerView.setAdapter(recyclerViewAdapterSecondTrain);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 

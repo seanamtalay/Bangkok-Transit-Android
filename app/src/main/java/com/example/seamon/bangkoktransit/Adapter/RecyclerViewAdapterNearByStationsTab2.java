@@ -39,7 +39,7 @@ public class RecyclerViewAdapterNearByStationsTab2 extends RecyclerView.Adapter<
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Log.d(TAG, "onBindViewHolder: called.");
+        //Log.d(TAG, "onBindViewHolder: called.");
         holder.nearbyStationName.setText(mNearbyStationNames.get(position));
 
         //changeLogo(holder,mTrainNames.get(position));
