@@ -29,7 +29,7 @@
             android:layout_marginBottom="30dp"
             android:paddingBottom="10dp"
             android:layout_marginTop="0dp">
-            <!--Add row dynamically in Tab3Fragment.java -->
+            <!--Add row dynamically in InformationTabFragment.java -->
         </TableLayout>
 
     </ScrollView>

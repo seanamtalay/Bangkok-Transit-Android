@@ -35,9 +35,11 @@ public class PickSecondTrainActivity extends AppCompatActivity {
         String originOrDestinationText = "";
         if(mSelectedAs.equals("origin")){
             originOrDestinationText = getResources().getString(R.string.select_destination_station);
+            getSupportActionBar().setTitle("Pick Destination");
         }
         else if(mSelectedAs.equals("destination")){
             originOrDestinationText = getResources().getString(R.string.select_origin_station);
+            getSupportActionBar().setTitle("Pick Origin");
         }
         Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
         selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
@@ -51,9 +53,11 @@ public class PickSecondTrainActivity extends AppCompatActivity {
         String originOrDestinationText = "";
         if(mSelectedAs.equals("origin")){
             originOrDestinationText = getResources().getString(R.string.select_destination_station);
+            getSupportActionBar().setTitle("Pick Destination");
         }
         else if(mSelectedAs.equals("destination")){
             originOrDestinationText = getResources().getString(R.string.select_origin_station);
+            getSupportActionBar().setTitle("Pick Origin");
         }
         Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
         selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));

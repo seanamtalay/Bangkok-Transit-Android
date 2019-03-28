@@ -30,15 +30,14 @@ import android.widget.TextView;
 
 import com.example.seamon.bangkoktransit.Activity.ZoomTransitMapActivity;
 import com.example.seamon.bangkoktransit.Adapter.EtaStationRecyclerAdapter;
-import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterStations;
 import com.example.seamon.bangkoktransit.R;
 
 import java.util.ArrayList;
 
 import static android.content.Context.LOCATION_SERVICE;
 
-public class Tab3Fragment extends Fragment {
-    private static final String TAG = "Tab3Fragment";
+public class InformationTabFragment extends Fragment {
+    private static final String TAG = "InformationTabFragment";
 
     private ArrayList<String> mNearByStations = new ArrayList<>();
     private LocationManager mLocationManager;
@@ -49,7 +48,7 @@ public class Tab3Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tab3fragment, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_information_tab, container, false);
         ImageView transitMap = rootView.findViewById(R.id.transit_map);
         Button ARLTimeButton = rootView.findViewById(R.id.ARL_time_button);
         Button BTSTimeButton = rootView.findViewById(R.id.BTS_time_button);

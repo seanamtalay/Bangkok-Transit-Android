@@ -15,8 +15,8 @@ import com.example.seamon.bangkoktransit.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Tab1Fragment  extends Fragment{
-    private static final String TAG = "Tab1Fragment";
+public class AllStationTabFragment extends Fragment{
+    private static final String TAG = "AllStationTabFragment";
     //vars
     private ArrayList<String> mTrainNames = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class Tab1Fragment  extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tab1fragment, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_all_station_tab, container, false);
 
         initTrainNames(rootView);
 

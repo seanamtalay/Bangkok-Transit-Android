@@ -31,6 +31,7 @@ public class PickStationActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Pick Station");
 
         trainLogoHeader = findViewById(R.id.pick_station_line_head_image);
         trainNameHeader = findViewById(R.id.pick_station_line_head_text);

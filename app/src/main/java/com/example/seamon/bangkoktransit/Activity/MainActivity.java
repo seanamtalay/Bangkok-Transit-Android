@@ -13,10 +13,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.seamon.bangkoktransit.Fragment.AllStationTabFragment;
 import com.example.seamon.bangkoktransit.R;
-import com.example.seamon.bangkoktransit.Fragment.Tab1Fragment;
-import com.example.seamon.bangkoktransit.Fragment.Tab2Fragment;
-import com.example.seamon.bangkoktransit.Fragment.Tab3Fragment;
+import com.example.seamon.bangkoktransit.Fragment.InformationTabFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -101,13 +100,13 @@ public class MainActivity extends AppCompatActivity {
             //Returning the current tabs
             switch (position){
                 case 0:
-                    Tab3Fragment tab1 = new Tab3Fragment();
+                    InformationTabFragment tab1 = new InformationTabFragment();
                     return tab1;
                 /*case 1:
                     Tab2Fragment tab2 = new Tab2Fragment();
                     return tab2;*/
                 case 1:
-                    Tab1Fragment tab3 = new Tab1Fragment();
+                    AllStationTabFragment tab3 = new AllStationTabFragment();
                     return tab3;
                 default:
                     return null;
