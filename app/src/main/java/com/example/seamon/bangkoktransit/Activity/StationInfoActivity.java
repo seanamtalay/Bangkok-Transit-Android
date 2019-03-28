@@ -270,6 +270,9 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cameraLatLng, zoomLevel));
         //googleMap.getUiSettings().setZoomGesturesEnabled(false);
         googleMap.getUiSettings().setScrollGesturesEnabled(false);
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
+        googleMap.getUiSettings().setIndoorLevelPickerEnabled(true);
+        googleMap.setPadding(0,0,0,115);
 
 
     }

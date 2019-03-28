@@ -34,6 +34,8 @@ import com.example.seamon.bangkoktransit.R;
 
 import java.util.ArrayList;
 
+import hotchemi.android.rate.AppRate;
+
 import static android.content.Context.LOCATION_SERVICE;
 
 public class InformationTabFragment extends Fragment {
@@ -50,9 +52,9 @@ public class InformationTabFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_information_tab, container, false);
         ImageView transitMap = rootView.findViewById(R.id.transit_map);
-        Button ARLTimeButton = rootView.findViewById(R.id.ARL_time_button);
+        /*Button ARLTimeButton = rootView.findViewById(R.id.ARL_time_button);
         Button BTSTimeButton = rootView.findViewById(R.id.BTS_time_button);
-        Button MRTTimeButton = rootView.findViewById(R.id.MRT_time_button);
+        Button MRTTimeButton = rootView.findViewById(R.id.MRT_time_button);*/
 
         mAllStationsArray = getResources().getStringArray(R.array.all_stations_name_array);
         mContext = getContext();
@@ -69,7 +71,7 @@ public class InformationTabFragment extends Fragment {
             }
         });
 
-        //pop up message showing time schedules
+        /*//pop up message showing time schedules
         ARLTimeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -118,8 +120,15 @@ public class InformationTabFragment extends Fragment {
 
             }
         });
-
+*/
         getNearByStations(rootView);
+
+        AppRate.with(getActivity())
+                .setLaunchTimes(5)
+                .setRemindInterval(3)
+                .setDebug(true)
+                .monitor();
+        AppRate.showRateDialogIfMeetsConditions(getActivity());
 
         return rootView;
     }
@@ -204,7 +213,7 @@ public class InformationTabFragment extends Fragment {
                 Double currentLat = location.getLatitude();
                 Double currentLng = location.getLongitude();
 
-                // near by radius =  +- 0.1
+                // near by radius =  +- 0.005
                 String[] eachStation;
                 String eachStationLatLng;
                 String[] eachLatLng;
@@ -225,8 +234,8 @@ public class InformationTabFragment extends Fragment {
                     compareLat = Double.parseDouble(eachLatLng[0]);
                     compareLng = Double.parseDouble(eachLatLng[1]);
 
-                    if (compareLat <= currentLat + 0.01 && compareLat >= currentLat - 0.01) {
-                        if (compareLng <= currentLng + 0.01 && compareLng >= currentLng - 0.01) {
+                    if (compareLat <= currentLat + 0.005 && compareLat >= currentLat - 0.005) {
+                        if (compareLng <= currentLng + 0.005 && compareLng >= currentLng - 0.005) {
                             //Log.d(TAG, "onLocationChanged: detected station nearby! :"+eachStation[0]);
                             //add that station to the mNearByStations arrayList
                             mNearByStations.add(current_station); // full name with code format

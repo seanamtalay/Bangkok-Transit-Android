@@ -26,6 +26,7 @@
         android:layout_marginTop="8dp"
         android:text="Station Name"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
         app:layout_constraintStart_toEndOf="@+id/nearby_eta_line_image"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -17,6 +17,8 @@ import com.example.seamon.bangkoktransit.Fragment.AllStationTabFragment;
 import com.example.seamon.bangkoktransit.R;
 import com.example.seamon.bangkoktransit.Fragment.InformationTabFragment;
 
+import hotchemi.android.rate.AppRate;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
-
 
 
     }
