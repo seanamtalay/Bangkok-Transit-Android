@@ -5,13 +5,15 @@
     android:id="@+id/nestedScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Activity.StationInfoActivity"
     tools:showIn="@layout/activity_station_info">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/cardview_shadow_end_color">
 
         <android.support.v7.widget.CardView
             android:id="@+id/station_info_cardView"
@@ -19,11 +21,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             app:cardCornerRadius="15dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -35,11 +37,7 @@
                     android:id="@+id/divider_line_platform"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -49,11 +47,7 @@
                     android:id="@+id/divider_platform_exit"
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginRight="32dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +55,7 @@
 
                 <View
                     android:id="@+id/divider_name_line"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="1dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
@@ -91,7 +85,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginRight="32dp"
                     android:lineSpacingMultiplier="1.5"
@@ -120,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
                     android:layout_marginRight="32dp"
                     android:layout_marginBottom="16dp"
@@ -152,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:text="Platforms"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     app:layout_constraintStart_toStartOf="parent"
@@ -164,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:text="Exits"
                     android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                     app:layout_constraintStart_toStartOf="parent"
@@ -206,13 +200,9 @@
 
                 <View
                     android:id="@+id/divider"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
