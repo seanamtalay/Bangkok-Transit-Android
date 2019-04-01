@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import com.example.seamon.bangkoktransit.Fragment.AllStationTabFragment;
 import com.example.seamon.bangkoktransit.R;
 import com.example.seamon.bangkoktransit.Fragment.InformationTabFragment;
+import com.google.android.gms.ads.MobileAds;
 
 import hotchemi.android.rate.AppRate;
 
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713
+        String adMobAppID = getResources().getString(R.string.AD_MOB_APP_ID);
+        MobileAds.initialize(this, adMobAppID);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

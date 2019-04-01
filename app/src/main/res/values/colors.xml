@@ -12,4 +12,5 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="blackDisabled">#61000000</color>
+    <color name="colorBackground">#F0F4F7</color>
 </resources>

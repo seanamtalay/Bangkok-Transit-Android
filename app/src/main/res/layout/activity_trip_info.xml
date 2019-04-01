@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_end_color"
+    android:background="@color/colorBackground"
     tools:context=".Activity.TripInfoActivity">
 
     <android.support.v7.widget.CardView
@@ -35,6 +35,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
                 android:text="00"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/num_transits_label"
@@ -49,6 +50,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="Number of Transits :"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cost_label" />
@@ -99,6 +101,7 @@
                 android:layout_marginRight="64dp"
                 android:gravity="center"
                 android:text="Station1"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +115,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:text="Estimated Cost :"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider_line_platform" />
 
@@ -123,6 +127,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
                 android:text="000"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/cost_label"
@@ -139,6 +144,7 @@
                 android:layout_marginRight="64dp"
                 android:gravity="center"
                 android:text="Station2"
+                android:textColor="@color/common_google_signin_btn_text_light_pressed"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

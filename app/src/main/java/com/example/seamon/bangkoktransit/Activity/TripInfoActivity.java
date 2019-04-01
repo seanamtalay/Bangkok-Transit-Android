@@ -137,6 +137,7 @@ public class TripInfoActivity extends AppCompatActivity implements OnMapReadyCal
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setTitle("Trip Info");
 
         arrowStations.setRotation(180);
 

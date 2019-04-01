@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.seamon.bangkoktransit.R;
 import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterStations;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,6 +25,7 @@ public class PickStationActivity extends AppCompatActivity {
     private ArrayList<String> mStationNames = new ArrayList<>();
     private TextView trainNameHeader;
     private ImageView trainLogoHeader;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,10 @@ public class PickStationActivity extends AppCompatActivity {
         trainNameHeader = findViewById(R.id.pick_station_line_head_text);
 
         getIncomingIntent();
+
+        mAdView = findViewById(R.id.pick_station_adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     private void getIncomingIntent(){

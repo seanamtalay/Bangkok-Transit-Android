@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -19,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.seamon.bangkoktransit.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -36,6 +39,7 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
     private Double mStationLng;
     private String mStationNameForMaps;
     private GoogleMap mGoogleMap;
+    private CardView mTicketCostCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +52,18 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
         TextView stationInfoExit = findViewById(R.id.station_info_exit);
         Button setOriginButton = findViewById(R.id.set_origin_button);
         Button setDestinationButton = findViewById(R.id.set_destination_button);
+        CardView mTicketCostCard = findViewById(R.id.ticket_cost_cardView);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         current_station = getIncomingIntent();
+
+        //AdMob
+        AdView mAdView = findViewById(R.id.station_info_adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         //Get the station code
         String[] splitedName = current_station.split("\\s+");
@@ -106,6 +116,8 @@ public class StationInfoActivity extends AppCompatActivity implements OnMapReady
         if(!has_ori_des_buttons){
             setOriginButton.setVisibility(View.GONE);
             setDestinationButton.setVisibility(View.GONE);
+            mTicketCostCard.setVisibility(View.GONE);
+
         }
 
         //As Origin button

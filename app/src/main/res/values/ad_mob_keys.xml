@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!--Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713-->
+    <string name="AD_MOB_APP_ID">ca-app-pub-6637763333095151~3090788650</string>
+
+    <!--Test ad Id : ca-app-pub-3940256099942544/6300978111-->
+    <string name="AD_MOB_BANNER_ID_PICK_STATION">ca-app-pub-6637763333095151/5333808617</string>
+
+    <string name="AD_MOB_BANNER_ID_PICK_2ND_STATION">ca-app-pub-6637763333095151/8337399999</string>
+
+    <string name="AD_MOB_BANNER_ID_STATION_INFO">ca-app-pub-6637763333095151/3870352000</string>
+</resources>

@@ -10,6 +10,8 @@ import android.view.MenuItem;
 
 import com.example.seamon.bangkoktransit.Adapter.RecyclerViewAdapterSecondTrain;
 import com.example.seamon.bangkoktransit.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,10 +30,14 @@ public class PickSecondTrainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pick_second_train);
         getIncomingIntent();
 
+        AdView mAdView = findViewById(R.id.pick_2nd_train_adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        //Snack bar asking user to pick the second station
+        /*//Snack bar asking user to pick the second station
         String originOrDestinationText = "";
         if(mSelectedAs.equals("origin")){
             originOrDestinationText = getResources().getString(R.string.select_destination_station);
@@ -41,9 +47,9 @@ public class PickSecondTrainActivity extends AppCompatActivity {
             originOrDestinationText = getResources().getString(R.string.select_origin_station);
             getSupportActionBar().setTitle("Pick Origin");
         }
-        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
+        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 4000);
         selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        selectStationSnackbar.show();
+        selectStationSnackbar.show();*/
     }
 
     @Override
@@ -59,7 +65,7 @@ public class PickSecondTrainActivity extends AppCompatActivity {
             originOrDestinationText = getResources().getString(R.string.select_origin_station);
             getSupportActionBar().setTitle("Pick Origin");
         }
-        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 7000);
+        Snackbar selectStationSnackbar = Snackbar.make(findViewById(android.R.id.content), originOrDestinationText, 4000);
         selectStationSnackbar.getView().setBackgroundColor(getResources().getColor(R.color.colorAccent));
         selectStationSnackbar.show();
     }

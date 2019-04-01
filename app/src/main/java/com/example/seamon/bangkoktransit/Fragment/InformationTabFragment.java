@@ -126,7 +126,6 @@ public class InformationTabFragment extends Fragment {
         AppRate.with(getActivity())
                 .setLaunchTimes(5)
                 .setRemindInterval(3)
-                .setDebug(true)
                 .monitor();
         AppRate.showRateDialogIfMeetsConditions(getActivity());
 
